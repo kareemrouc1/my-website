@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mawsoat-altwsek.netlify.app/sitemap.xml
