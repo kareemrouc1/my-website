@@ -38,3 +38,12 @@ c6dc3e5 - تحديث تلقائي: 2025-06-22 10:34:40 (2 seconds ago)
 🔄 يوجد تغييرات:
  M .git_token
  M git_uploader.log
+[master 2496250] تحديث تلقائي: 2025-06-22 10:57:47
+ 2 files changed, 21 insertions(+), 1 deletion(-)
+✔ تم حفظ التغييرات
+fatal: unable to access 'https://https://github.com/kareemrouc1/my-website.git/': Could not resolve host: https
+❌ فشل في الرفع إلى GitHub
+
+🔔 [2025-06-22 11:04:50] بدء التنفيذ
+🔄 يوجد تغييرات:
+ M git_uploader.log
