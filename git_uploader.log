@@ -18,3 +18,23 @@ fatal: unable to access 'https://https://github.com/kareemrouc1/my-website.git/'
 🔄 يوجد تغييرات جديدة:
  M git_uploader.log
  M git_uploader_pro.sh
+[master c6dc3e5] تحديث تلقائي: 2025-06-22 10:34:40
+ 2 files changed, 16 insertions(+), 1 deletion(-)
+✔ تم حفظ التغييرات
+To https://github.com/kareemrouc1/my-website.git
+   134c3b7..c6dc3e5  master -> master
+✅ تم الرفع بنجاح
+c6dc3e5 - تحديث تلقائي: 2025-06-22 10:34:40 (2 seconds ago)
+🕒 [2025-06-22 10:34:42] انتهى التنفيذ بنجاح
+══════════════════════════════════════
+
+🔔 [2025-06-22 10:44:28] بدء التنفيذ
+❌ خطأ: ملف التوكين غير موجود
+
+🔔 [2025-06-22 10:51:07] بدء التنفيذ
+❌ خطأ: ملف التوكين غير موجود
+
+🔔 [2025-06-22 10:57:47] بدء التنفيذ
+🔄 يوجد تغييرات:
+ M .git_token
+ M git_uploader.log
