@@ -678,14 +678,18 @@ footer::before {
 /* أضف هذا في نهاية ملف styles.css الأصلي */
 
 /* تحسينات الصفحة الفرعية */
-.featured-image {
+.featured-image,
+.gallery {
     max-height: 400px !important;
     overflow: hidden;
 }
 
-.featured-image img {
+.featured-image img,
+.gallery img {
     height: auto !important;
     object-fit: contain !important;
+    display: block;
+    margin: 0 auto;
 }
 
 /* تحسين وضوح النص في البطاقات */
@@ -696,13 +700,15 @@ footer::before {
 
 /* تعديلات التجاوب */
 @media (max-width: 768px) {
-    .featured-image {
+    .featured-image,
+    .gallery {
         max-height: 300px !important;
     }
 }
 
 @media (max-width: 480px) {
-    .featured-image {
+    .featured-image,
+    .gallery {
         max-height: 250px !important;
     }
 }
