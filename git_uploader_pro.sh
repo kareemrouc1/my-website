@@ -15,7 +15,7 @@
 # 🔧 الإعدادات الأساسية
 TOKEN_FILE="/storage/emulated/0/1/.git_token"
 PROJECT_DIR="/storage/emulated/0/1"
-REPO_URL="https://github.com/kareemrouc1/my-website.git"
+REPO_URL="github.com/kareemrouc1/my-website.git"
 LOG_FILE="/storage/emulated/0/1/git_uploader.log"
 
 # 📁 إنشاء ملف السجل إذا لم يكن موجوداً

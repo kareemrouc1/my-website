@@ -3,3 +3,18 @@
 🔄 يوجد تغييرات جديدة:
 ?? git_uploader.log
 ?? git_uploader_pro.sh
+[master 59b41bd] تحديث تلقائي: 2025-06-22 10:31:06
+ 2 files changed, 81 insertions(+)
+ create mode 100644 git_uploader.log
+ create mode 100644 git_uploader_pro.sh
+✔ تم حفظ التغييرات
+fatal: unable to access 'https://https://github.com/kareemrouc1/my-website.git/': Could not resolve host: https
+❌ فشل في الرفع إلى GitHub
+🔍 الأسباب المحتملة:
+1. Token منتهي الصلاحية
+2. مشكلة في الاتصال بالإنترنت
+
+🔔 [2025-06-22 10:34:40] بدء التنفيذ
+🔄 يوجد تغييرات جديدة:
+ M git_uploader.log
+ M git_uploader_pro.sh
