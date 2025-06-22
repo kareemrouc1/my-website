@@ -156,7 +156,9 @@ nav ul li a i {
 .search-box button:hover {
     color: #6e8efb;
 }
-
+nav {
+  transition: transform 0.3s ease-in-out;
+}
 /* المحتوى الرئيسي */
 main {
     padding: 2rem 0;
@@ -711,4 +713,15 @@ footer::before {
     .gallery {
         max-height: 250px !important;
     }
+}
+.search-box {
+  position: absolute;
+  top: 100%; /* مكانها الطبيعي أسفل nav */
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: top 0.3s ease, transform 0.3s ease;
+  z-index: 90;
+}
+nav {
+  transition: transform 0.3s ease-in-out;
 }

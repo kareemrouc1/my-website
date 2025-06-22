@@ -195,5 +195,27 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+  let lastScrollTop = 0;
+
+  const nav = document.querySelector("nav");
+  const searchBox = document.querySelector(".search-box");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+      nav.style.transform = "translateY(-100%)";
+      if (searchBox) searchBox.style.top = "0";
+    } else {
+      // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+      nav.style.transform = "translateY(0)";
+      if (searchBox) searchBox.style.top = "100%";
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
 </body>
 </html>
