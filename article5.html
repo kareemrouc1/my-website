@@ -2,23 +2,100 @@
 <html lang="ar" dir="rtl">
 <head>
     <!-- SEO Enhancements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="دليل شامل لاختيار أول لغة برمجة تتعلمها - مقارنة بين أفضل لغات البرمجة للمبتدئين مع إيجابيات وسلبيات كل منها">
     <meta name="keywords" content="تعلم البرمجة, لغات البرمجة للمبتدئين, أفضل لغة برمجة, كيفية تعلم البرمجة, البرمجة للمبتدئين">
     <meta name="author" content="Kareem Rouc">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="ما هي أفضل لغات البرمجة للمبتدئين؟ - دليل شامل" />
     <meta property="og:description" content="اكتشف أفضل لغات البرمجة للمبتدئين مع مقارنة شاملة لمساعدتك في اختيار أول لغة برمجة تتعلمها">
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://mawsoat-altwsek.netlify.app/best-programming-languages-for-beginners" />
     <meta property="og:locale" content="ar_AR" />
-<link rel="icon" type="image/png" href="favicon.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>ما هي أفضل لغات البرمجة للمبتدئين؟ - دليل شامل لاختيار أول لغة برمجة تتعلمها</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* إضافة أنماط أساسية لضمان ظهور المحتوى */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        
+        /* تحسين تنسيق الجدول */
+        .comparison-table {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* تحسين تنسيق المحتوى العام */
+        .article-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        /* تحسين التجاوب */
+        @media (max-width: 768px) {
+            .comparison-table table {
+                font-size: 14px;
+            }
+            
+            .comparison-table th, 
+            .comparison-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- باقي الكود كما هو بدون تغيير -->
     <header>
         <div class="container">
             <h1><i class="fas fa-code"></i> موسوعة التوثيق</h1>
@@ -383,28 +460,30 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-<script>
-  let lastScrollTop = 0;
+    <script>
+        // إضافة سنة حقوق النشر الحالية
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // تحسين سلوك الشريط العلوي عند التمرير
+        let lastScrollTop = 0;
+        const nav = document.querySelector("nav");
+        const searchBox = document.querySelector(".search-box");
 
-  const nav = document.querySelector("nav");
-  const searchBox = document.querySelector(".search-box");
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+                nav.style.transform = "translateY(-100%)";
+                if (searchBox) searchBox.style.top = "0";
+            } else {
+                // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+                nav.style.transform = "translateY(0)";
+                if (searchBox) searchBox.style.top = "100%";
+            }
 
-    if (scrollTop > lastScrollTop) {
-      // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
-      nav.style.transform = "translateY(-100%)";
-      if (searchBox) searchBox.style.top = "0";
-    } else {
-      // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
-      nav.style.transform = "translateY(0)";
-      if (searchBox) searchBox.style.top = "100%";
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
 </body>
 </html>

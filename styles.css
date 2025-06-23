@@ -681,17 +681,20 @@ footer::before {
 
 /* تحسينات الصفحة الفرعية */
 .featured-image,
-.gallery {
+.gallery,
+.article-card {
     max-height: 400px !important;
     overflow: hidden;
 }
 
 .featured-image img,
-.gallery img {
+.gallery img,
+.article-card img {
     height: auto !important;
     object-fit: contain !important;
     display: block;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* تحسين وضوح النص في البطاقات */
@@ -703,16 +706,41 @@ footer::before {
 /* تعديلات التجاوب */
 @media (max-width: 768px) {
     .featured-image,
-    .gallery {
+    .gallery,
+    .article-card {
         max-height: 300px !important;
     }
 }
 
 @media (max-width: 480px) {
     .featured-image,
-    .gallery {
+    .gallery,
+    .article-card {
         max-height: 250px !important;
     }
+}
+
+/* إضافة أنماط خاصة لبطاقات المقالات */
+.article-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card .article-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 15px;
 }
 .search-box {
   position: absolute;
