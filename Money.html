@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- تحسينات SEO -->
+    <meta name="description" content="موسوعة المال والأعمال: أحدث المقالات والشروحات في عالم الاقتصاد والاستثمار والأسواق المالية.">
+    <meta name="keywords" content="مال، أعمال، اقتصاد، استثمار، أسواق مالية، تحليل فني، إدارة أموال، تداول">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="موسوعة المال والأعمال - مقالات شاملة في عالم الاقتصاد" />
+    <meta property="og:description" content="أحدث المقالات المالية ونصائح الاستثمار للمبتدئين والمحترفين">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-almwal.netlify.app/business" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>موسوعة المال والأعمال - مقالات اقتصادية شاملة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-coins"></i> موسوعة المال والأعمال</h1>
+            <p>أحدث المقالات والشروحات في عالم الاقتصاد والاستثمار</p>
+        </div>
+    </header>
+
+   <nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+            <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+            <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+            <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+            <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+        </ul>
+        
+        <div class="search-box">
+            <form onsubmit="handleSearch(event)" role="search">
+                <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+// اس.تخراج كلمة البحث من URL إن وجدت (للعودة للبحث السابق)
+const urlParams = new URLSearchParams(window.location.search);
+const searchParam = urlParams.get('q');
+if(searchParam) {
+    document.getElementById('searchQuery').value = searchParam;
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('searchQuery').value.trim();
+    
+    if(query) {
+        // توجيه إلى صفحة البحث مع الاحتفاظ بكلمة البحث
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    } else {
+        alert('الرجاء إدخال كلمة بحث');
+    }
+}
+</script>
+
+    <main class="container">
+        <section class="featured-articles">
+            <h2><i class="fas fa-star"></i> أحدث المقالات التقنية</h2>
+            <div class="articles-grid">
+                
+              <!-- مقالة 1 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="استراتيجيات الاستثمار الناجح 2025">
+    <div class="article-content">
+        <h3>أفضل 10 استراتيجيات استثمارية ناجحة في 2025</h3>
+        <p>دليل شامل لأكثر الطرق فعالية لتنمية أموالك وتحقيق عوائد مالية كبيرة هذا العام</p>
+        <a href="investment-strategies-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 2 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="إدارة المشاريع الصغيرة">
+    <div class="article-content">
+        <h3>كيف تدير مشروعك الصغير بنجاح في 5 خطوات فقط</h3>
+        <p>أسرار إدارة المشاريع الناشئة وتجنب الأخطاء الشائعة التي تقتل 90% من الأعمال الجديدة</p>
+        <a href="small-business-management.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 3 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق الرقمي 2025">
+    <div class="article-content">
+        <h3>أحدث trends التسويق الرقمي التي يجب أن تعرفها في 2025</h3>
+        <p>كل ما تحتاج لمعرفته عن تحولات السوق الرقمي وأفضل أدوات التسويق الإلكتروني هذا العام</p>
+        <a href="digital-marketing-trends-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 4 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في العقارات">
+    <div class="article-content">
+        <h3>دليل المبتدئين للاستثمار العقاري برأس مال صغير</h3>
+        <p>كيف تبدأ في مجال العقارات وتجنب المخاطر الخفية التي لا يعلمها إلا المحترفون</p>
+        <a href="real-estate-investment-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 5 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التحليل المالي للمشاريع">
+    <div class="article-content">
+        <h3>كيف تقرأ البيانات المالية مثل المحترفين في 7 أيام</h3>
+        <p>تعلم أساسيات التحليل المالي وقراءة التقارير المالية لاتخاذ قرارات استثمارية ذكية</p>
+        <a href="financial-analysis-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 6 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="العملات الرقمية 2025">
+    <div class="article-content">
+        <h3>مستقبل العملات الرقمية: أفضل 5 عملات للاستثمار في 2025</h3>
+        <p>تحليل شامل لسوق الكريبتو وتوقعات الخبراء لأفضل الفرص الاستثمارية هذا العام</p>
+        <a href="cryptocurrency-investment-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 7 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر السوشيال ميديا">
+    <div class="article-content">
+        <h3>أسرار التسويق عبر السوشيال ميديا التي تضاعف مبيعاتك</h3>
+        <p>استراتيجيات مثبتة لزيادة التفاعل والتحويلات عبر منصات التواصل الاجتماعي</p>
+        <a href="social-media-marketing-secrets.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 8 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="إدارة الموارد البشرية">
+    <div class="article-content">
+        <h3>كتب بناء فريق عمل ناجح: دليل القائد الذكي</h3>
+        <p>أفضل الممارسات في إدارة الموارد البشرية وتطوير فرق العمل عالية الأداء</p>
+        <a href="building-successful-teams.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 9 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب">
+    <div class="article-content">
+        <h3>هل لا يزال الذهب استثماراً آمناً في 2025؟ تحليل مفصل</h3>
+        <p>إيجابيات وسلبيات الاستثمار في الذهب وأفضل الطرق لشراء وتخزين المعدن النفيس</p>
+        <a href="gold-investment-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 10 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال">
+    <div class="article-content">
+        <h3>10 دروس من أنجح رواد الأعمال في العالم العربي</h3>
+        <p>قصص نجاح ملهمة وأهم الدروس المستفادة من تجارب رواد الأعمال العرب</p>
+        <a href="arab-entrepreneurs-success.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 11 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التخطيط المالي الشخصي">
+    <div class="article-content">
+        <h3>خطة مالية شخصية تحقق لك الحرية المالية في 5 سنوات</h3>
+        <p>دليل عملي لوضع خطة مالية ناجحة تمكنك من تحقيق أهدافك المالية بفعالية</p>
+        <a href="personal-financial-plan.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 12 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التجارة الإلكترونية 2025">
+    <div class="article-content">
+        <h3>أفضل منصات التجارة الإلكترونية لبدء متجرك الإلكتروني في 2025</h3>
+        <p>مقارنة شاملة بين أكبر المنصات مع إيجابيات وسلبيات كل منها لمساعدتك في الاختيار</p>
+        <a href="ecommerce-platforms-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 13 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الأسهم">
+    <div class="article-content">
+        <h3>كيف تختار أفضل الأسهم للاستثمار طويل الأجل؟</h3>
+        <p>معايير اختيار الأسهم القوية واستراتيجيات بناء محفظة استثمارية مربحة</p>
+        <a href="long-term-stock-investment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 14 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="إدارة الديون">
+    <div class="article-content">
+        <h3>7 استراتيجيات ذكية للتخلص من الديون بسرعة</h3>
+        <p>خطط عملية لإدارة الديون وتقليل الفوائد وبناء مستقبل مالي أكثر استقراراً</p>
+        <a href="debt-management-strategies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 15 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التمويل الجماعي">
+    <div class="article-content">
+        <h3>دليل شامل للتمويل الجماعي: كيف تمول مشروعك بذكاء؟</h3>
+        <p>أفضل منصات التمويل الجماعي ونصائح لنجاح حملات التمويل لمشاريعك</p>
+        <a href="crowdfunding-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 16 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق بالمحتوى">
+    <div class="article-content">
+        <h3>أسرار التسويق بالمحتوى الذي يحول الزوار إلى عملاء</h3>
+        <p>كيف تنشئ محتوى يجذب العملاء ويحسن ترتيبك في محركات البحث</p>
+        <a href="content-marketing-secrets.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 17 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الطاقة المتجددة">
+    <div class="article-content">
+        <h3>الاستثمار في الطاقة المتجددة: مستقبل الاقتصاد الأخضر</h3>
+        <p>فرص استثمارية واعدة في قطاع الطاقة النظيفة وتوقعات النمو المستقبلي</p>
+        <a href="renewable-energy-investment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 18 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال النسائية">
+    <div class="article-content">
+        <h3>تحديات ونجاحات رائدات الأعمال في العالم العربي</h3>
+        <p>قصص ملهمة ونصائح عملية من سيدات أعمال ناجحات في مختلف المجالات</p>
+        <a href="women-entrepreneurs-arab-world.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 19 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب الرقمي">
+    <div class="article-content">
+        <h3>الذهب الرقمي: مستقبل الاستثمار في NFTs والعملات الرقمية</h3>
+        <p>دليل شامل لفهم سوق الـ NFTs وكيفية الاستثمار فيه بذكاء</p>
+        <a href="digital-gold-investment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 20 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر المؤثرين">
+    <div class="article-content">
+        <h3>كيف تستفيد من التسويق عبر المؤثرين لزيادة مبيعاتك؟</h3>
+        <p>استراتيجيات فعالة للتعاون مع المؤثرين وتحقيق عوائد استثمارية عالية</p>
+        <a href="influencer-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 21 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="إدارة المخاطر المالية">
+    <div class="article-content">
+        <h3>كيف تحمي استثماراتك من المخاطر المالية غير المتوقعة؟</h3>
+        <p>أدوات واستراتيجيات متقدمة لإدارة المخاطر وحماية محفظتك الاستثمارية</p>
+        <a href="financial-risk-management.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 22 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذكاء الاصطناعي">
+    <div class="article-content">
+        <h3>الاستثمار في الذكاء الاصطناعي: الفرص والتحديات في 2025</h3>
+        <p>كيف تستثمر في شركات الذكاء الاصطناعي الناشئة وتستفيد من الثورة التكنولوجية</p>
+        <a href="ai-investment-opportunities.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 23 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال التقنية">
+    <div class="article-content">
+        <h3>كيف تطلق شركة ناشئة تقنية بدون خبرة برمجية؟</h3>
+        <p>دليل عملي لغير المبرمجين لبدء مشاريع تقنية ناجحة باستخدام الأدوات الحديثة</p>
+        <a href="tech-startup-non-programmers.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 24 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر البريد الإلكتروني">
+    <div class="article-content">
+        <h3>كيف تضاعف مبيعاتك عبر التسويق بالبريد الإلكتروني؟</h3>
+        <p>استراتيجيات متقدمة لبناء قوائم بريدية فعالة وتحويل المشتركين إلى عملاء</p>
+        <a href="email-marketing-strategies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 25 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الأسواق الناشئة">
+    <div class="article-content">
+        <h3>دليل الاستثمار في الأسواق الناشئة: المخاطر والفرص</h3>
+        <p>تحليل مفصل لأفضل الأسواق الناشئة للاستثمار في 2025 وكيفية تقليل المخاطر</p>
+        <a href="emerging-markets-investment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 26 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التمويل الشخصي">
+    <div class="article-content">
+        <h3>10 عادات مالية يجب أن تتبناها لتحقيق الثراء</h3>
+        <p>تغييرات بسيطة في عاداتك المالية يمكن أن تحول حياتك المالية بالكامل</p>
+        <a href="wealth-building-habits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 27 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر محركات البحث">
+    <div class="article-content">
+        <h3>أفضل استراتيجيات SEO لتحسين ترتيب موقعك في 2025</h3>
+        <p>تحديثات خوارزميات جوجل وأحدث تقنيات تحسين محركات البحث لهذا العام</p>
+        <a href="seo-strategies-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 28 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الصناديق">
+    <div class="article-content">
+        <h3>الصناديق الاستثمارية: كيف تختار الأفضل لمحفظتك؟</h3>
+        <p>مقارنة بين أنواع الصناديق الاستثمارية ونصائح لاختيار الأنسب لأهدافك</p>
+        <a href="investment-funds-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 29 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال الاجتماعية">
+    <div class="article-content">
+        <h3>كيف تبني مشروعاً ناجحاً يحقق الربح والتأثير الاجتماعي؟</h3>
+        <p>نماذج أعمال مبتكرة تجمع بين الربحية والمشاركة في حل المشكلات المجتمعية</p>
+        <a href="social-entrepreneurship-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 30 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب">
+    <div class="article-content">
+        <h3>الاستثمار في الذهب: دليل المبتدئين للشراء والتخزين</h3>
+        <p>كل ما تحتاج معرفته لبدء الاستثمار في الذهب بطريقة آمنة ومربحة</p>
+        <a href="gold-investment-beginners.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 31 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر الفيديو">
+    <div class="article-content">
+        <h3>كيف تستخدم الفيديو لتسويق عملك بطريقة احترافية؟</h3>
+        <p>أدوات ونصائح لإنشاء محتوى فيديو جذاب يزيد من مبيعاتك وعلامتك التجارية</p>
+        <a href="video-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 32 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في السندات">
+    <div class="article-content">
+        <h3>دليل الاستثمار في السندات للمبتدئين: المخاطر والعوائد</h3>
+        <p>كل ما تحتاج معرفته عن سوق السندات وكيفية تحقيق دخل ثابت منها</p>
+        <a href="bonds-investment-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 33 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال الرقمية">
+    <div class="article-content">
+        <h3>كيف تبدأ عملاً رقمياً برأس مال صغير من المنزل؟</h3>
+        <p>أفكار مشاريع رقمية يمكنك بدءها اليوم بدون الحاجة إلى مكتب أو موظفين</p>
+        <a href="digital-business-from-home.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 34 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر المحتوى المرئي">
+    <div class="article-content">
+        <h3>أسرار إنشاء محتوى مرئي يجذب الملايين على السوشيال ميديا</h3>
+        <p>أدوات ونصائح لتصميم محتوى مرئي احترافي يزيد من تفاعل متابعيك</p>
+        <a href="visual-content-marketing.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 35 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الشركات الناشئة">
+    <div class="article-content">
+        <h3>كيف تستثمر في الشركات الناشئة وتجنب الخسائر الكبيرة؟</h3>
+        <p>معايير اختيار الشركات الناشئة الواعدة واستراتيجيات تقليل المخاطر</p>
+        <a href="startup-investment-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 36 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر البودكاست">
+    <div class="article-content">
+        <h3>كيف تستخدم البودكاست لبناء علامة تجارية قوية؟</h3>
+        <p>دليل شامل لبدء بودكاست ناجح يسهم في نمو عملك وزيادة جمهورك</p>
+        <a href="podcast-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 37 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في العقارات التجارية">
+    <div class="article-content">
+        <h3>الاستثمار في العقارات التجارية: الفرص والتحديات</h3>
+        <p>كيف تبدأ في سوق العقارات التجارية وما هي المعايير لاختيار العقار المناسب</p>
+        <a href="commercial-real-estate.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 38 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال للشباب">
+    <div class="article-content">
+        <h3>أفكار مشاريع ناجحة للشباب برأس مال محدود</h3>
+        <p>50 فكرة مشروع يمكن للشباب بدءها برأس مال صغير وتحقيق أرباح جيدة</p>
+        <a href="youth-entrepreneurship-ideas.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 39 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر الواتساب">
+    <div class="article-content">
+        <h3>كيف تستخدم الواتساب لتسويق عملك وزيادة المبيعات؟</h3>
+        <p>استراتيجيات فعالة للتسويق عبر الواتساب مع الحفاظ على العلاقات مع العملاء</p>
+        <a href="whatsapp-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 40 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب">
+    <div class="article-content">
+        <h3>متى يكون شراء الذهب استثماراً حكيماً؟ تحليل السوق</h3>
+        <p>توقعات أسعار الذهب وأفضل الأوقات للشراء والبيع في 2025</p>
+        <a href="gold-market-analysis.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 41 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر الانستجرام">
+    <div class="article-content">
+        <h3>أسرار النجاح في التسويق عبر الانستجرام في 2025</h3>
+        <p>أحدث استراتيجيات الانستجرام لزيادة المتابعين وتحويلهم إلى عملاء</p>
+        <a href="instagram-marketing-2025.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 42 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في التكنولوجيا المالية">
+    <div class="article-content">
+        <h3>FinTech: كيف تستثمر في مستقبل التكنولوجيا المالية؟</h3>
+        <p>أهم شركات التكنولوجيا المالية الواعدة وأفضل طرق الاستثمار في هذا القطاع</p>
+        <a href="fintech-investment-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 43 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال بعد الأربعين">
+    <div class="article-content">
+        <h3>كيف تبدأ مشروعاً ناجحاً بعد سن الأربعين؟</h3>
+        <p>قصص ملهمة ونصائح عملية لرواد الأعمال في منتصف العمر</p>
+        <a href="entrepreneurship-after-40.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 44 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر تيك توك">
+    <div class="article-content">
+        <h3>كيف تستفيد من تيك توك في تسويق عملك في 2025؟</h3>
+        <p>استراتيجيات إنشاء محتوى ناجح على تيك توك لجذب العملاء وزيادة المبيعات</p>
+        <a href="tiktok-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 45 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب">
+    <div class="article-content">
+        <h3>الاستثمار في الذهب مقابل العملات الرقمية: أيهما أفضل؟</h3>
+        <p>مقارنة شاملة بين خصائص ومخاطر وعوائد الاستثمار في الذهب والعملات المشفرة</p>
+        <a href="gold-vs-crypto.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 46 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال في مجال الصحة">
+    <div class="article-content">
+        <h3>أفكار مشاريع ناجحة في قطاع الصحة والعافية</h3>
+        <p>فرص استثمارية واعدة في مجال الرعاية الصحية والتكنولوجيا الطبية</p>
+        <a href="health-entrepreneurship.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 47 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر لينكد إن">
+    <div class="article-content">
+        <h3>كيف تستخدم لينكد إن لبناء شبكة علاقات مهنية قوية؟</h3>
+        <p>استراتيجيات فعالة للتسويق عبر لينكد إن وجذب عملاء جدد لعملك</p>
+        <a href="linkedin-marketing-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 48 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار في الذهب">
+    <div class="article-content">
+        <h3>كيف تشتري الذهب كاستثمار دون الوقوع في الغش؟</h3>
+        <p>نصائح عملية لشراء الذهب بأسعار مناسبة وتجنب عمليات النصب والاحتيال</p>
+        <a href="buying-gold-safely.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 49 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="ريادة الأعمال في مجال التعليم">
+    <div class="article-content">
+        <h3>أفكار مشاريع ناجحة في قطاع التعليم الإلكتروني</h3>
+        <p>كيف تستفيد من الطفرة في التعليم عن بعد وتبني مشروعاً مربحاً في هذا المجال</p>
+        <a href="edtech-entrepreneurship.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 50 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التسويق عبر اليوتيوب">
+    <div class="article-content">
+        <h3>كيف تحقق دخلًا من اليوتيوب في 2025؟ دليل المبتدئين</h3>
+        <p>خطوات عملية لإنشاء قناة يوتيوب ناجحة وتحقيق دخل شهري ثابت منها</p>
+        <a href="youtube-income-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+                   </div>
+        </section>
+
+        </section>
+    </main>
+
+     <footer>
+    <div class="container">
+        <div class="footer-content">
+            <!-- قسم "عن الموسوعة" مع بيانات منظمة (Schema) -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                <h3>عن الموسوعة</h3>
+                <p itemprop="description">موسوعة التوثيق توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث.</p>
+                <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                <meta itemprop="name" content="موسوعة التوثيق">
+            </div>
+
+            <!-- قسم الروابط مع روابط داخلية مُحسّنة -->
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                    <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                    <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                    <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                    <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- قسم النشرة البريدية مع إمكانية الوصول -->
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك ليصلك جديد الموسوعة</p>
+                <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                    <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                </form>
+            </div>
+
+            <!-- قسم وسائل التواصل مع بيانات منظمة -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- حقوق النشر مع بيانات تاريخية -->
+        <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+            <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+            <span itemprop="copyrightHolder">موسوعة التوثيق</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+      let lastScrollTop = 0;
+
+      const nav = document.querySelector("nav");
+      const searchBox = document.querySelector(".search-box");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+          nav.style.transform = "translateY(-100%)";
+          if (searchBox) searchBox.style.top = "0";
+        } else {
+          // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+          nav.style.transform = "translateY(0)";
+          if (searchBox) searchBox.style.top = "100%";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+</body>
+</html>
