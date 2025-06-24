@@ -53,39 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // وظيفة البحث
-    const searchInput = document.querySelector('.search-box input');
-    const searchButton = document.querySelector('.search-box button');
-    
-    searchButton.addEventListener('click', performSearch);
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') performSearch();
-    });
-    
-    function performSearch() {
-        const searchTerm = searchInput.value.trim();
-        if (searchTerm.length < 2) {
-            showToast('الرجاء إدخال كلمة بحث مكونة من حرفين على الأقل', 'error');
-            return;
-        }
-        
-        // عرض حالة التحميل
-        searchButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-        searchButton.disabled = true;
-        
-        // محاكاة طلب البحث (في التطبيق الحقيقي سيتم استبدالها بطلب AJAX)
-        setTimeout(() => {
-            searchButton.innerHTML = '<i class="fas fa-search"></i>';
-            searchButton.disabled = false;
-            
-            if (searchTerm.toLowerCase().includes('خطأ')) {
-                showToast('حدث خطأ أثناء البحث، يرجى المحاولة لاحقاً', 'error');
-            } else {
-                showToast(`تم العثور على 5 نتائج لـ "${searchTerm}"`, 'success');
-                // window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
-            }
-        }, 1500);
-    }
+   
 
     // تحميل المزيد من الأسئلة عند التمرير للأسفل
     let isLoading = false;

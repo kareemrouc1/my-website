@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتائج البحث</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .search-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+        .search-box button {
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .result-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .result-title {
+            color: #1a0dab;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .result-url {
+            color: #006621;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .result-snippet {
+            color: #545454;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-header">
+            <h1>نتائج البحث</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث مرة أخرى...">
+                <button onclick="performSearch()"><i class="fas fa-search"></i> بحث</button>
+            </div>
+        </div>
+
+        <div id="searchResults">
+            <!-- سيتم عرض النتائج هنا عبر JavaScript -->
+            <div class="no-results">جاري تحميل نتائج البحث...</div>
+        </div>
+    </div>
+
+    <script>
+        // استخراج كلمة البحث من URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q') || '';
+        
+        // محاكاة قاعدة بيانات (يمكن استبدالها ببيانات حقيقية)
+        const database = [
+            {
+                title: "أهم النصائح للعلاقات الناجحة",
+                url: "Relationships.html",
+                content: "العلاقات الناجحة تحتاج إلى الصدق والتواصل المستمر. في هذا المقال نقدم أهم النصائح العملية لبناء علاقات قوية ودائمة مع شريك الحياة."
+            },
+            {
+                title: "أحدث التطورات في عالم التكنولوجيا",
+                url: "technology.html",
+                content: "شهد عالم التكنولوجيا هذا العام تطورات مذهلة في الذكاء الاصطناعي وإنترنت الأشياء. تعرف على أحدث الابتكارات التي ستغير مستقبلنا."
+            },
+            {
+                title: "نصائح صحية للوقاية من الأمراض",
+                url: "health.html",
+                content: "الوقاية خير من العلاج. في هذا المقال نقدم مجموعة من النصائح الصحية البسيطة التي تساعدك على تقوية مناعتك والوقاية من الأمراض الشائعة."
+            }
+        ];
+
+        // عرض نتائج البحث
+        function displayResults() {
+            const resultsContainer = document.getElementById('searchResults');
+            
+            if (!query) {
+                resultsContainer.innerHTML = '<div class="no-results">الرجاء إدخال كلمة بحث</div>';
+                return;
+            }
+
+            // تصفية النتائج
+            const results = database.filter(item => 
+                item.title.includes(query) || 
+                item.content.includes(query)
+            );
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <h3>لا توجد نتائج مطابقة لـ "${query}"</h3>
+                        <p>حاول استخدام كلمات بحث أخرى أو تحقق من الأخطاء الإملائية</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // عرض النتائج
+            let html = '';
+            results.forEach(item => {
+                // تمييز كلمة البحث في النتائج
+                const highlightedTitle = item.title.replace(new RegExp(query, 'gi'), 
+                    match => `<span class="highlight">${match}</span>`);
+                
+                const highlightedContent = item.content.replace(new RegExp(query, 'gi'), 
+                    match => `<span class="highlight">${match}</span>`);
+
+                html += `
+                    <div class="result-item">
+                        <h2 class="result-title"><a href="${item.url}">${highlightedTitle}</a></h2>
+                        <div class="result-url">${window.location.origin}/${item.url}</div>
+                        <p class="result-snippet">${highlightedContent}</p>
+                    </div>
+                `;
+            });
+
+            resultsContainer.innerHTML = html;
+        }
+
+        // تنفيذ بحث جديد
+        function performSearch() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput.value.trim()) {
+                window.location.href = `search.html?q=${encodeURIComponent(searchInput.value)}`;
+            }
+        }
+
+        // تفعيل البحث عند الضغط على Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // عرض النتائج عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('searchInput').value = query;
+            displayResults();
+        });
+    </script>
+</body>
+</html>
