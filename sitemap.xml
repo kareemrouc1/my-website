@@ -39,4 +39,16 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- صفحة المال -->
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/Money.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- صفحة البحث -->
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/search.html</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
