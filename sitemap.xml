@@ -10,6 +10,10 @@
     </image:image>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/index.html</loc>
+    <priority>1.0</priority>
+  </url>
 
   <!-- صفحات المقالات -->
   <url>
@@ -33,19 +37,49 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- صفحة التكنولوجيا -->
+  <!-- صفحات المحتوى المتنوع -->
   <url>
     <loc>https://mawsoat-altwsek.netlify.app/technology.html</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- صفحة المال -->
   <url>
     <loc>https://mawsoat-altwsek.netlify.app/Money.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/Relationships.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/health.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/help.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/conditions.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/contacted.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/disclaimer.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/policy.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/question.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-  <!-- المواضيع الجديدة -->
+  <!-- صفحات المواضيع -->
   <url>
     <loc>https://mawsoat-altwsek.netlify.app/topic1.html</loc>
     <priority>0.7</priority>
@@ -70,6 +104,28 @@
     <loc>https://mawsoat-altwsek.netlify.app/topic6.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic7.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic8.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic9.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic10.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic11.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- صفحة جميع المواضيع -->
   <url>
     <loc>https://mawsoat-altwsek.netlify.app/topics.html</loc>
     <priority>0.7</priority>
