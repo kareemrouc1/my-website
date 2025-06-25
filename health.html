@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- تحسينات SEO للصحة -->
+    <meta name="description" content="موسوعة الصحة والعافية: أحدث المعلومات الطبية والنصائح الصحية الموثوقة حول الأمراض الأكثر بحثاً وطرق الوقاية والعلاج.">
+    <meta name="keywords" content="صحة، طب، أمراض، علاج، وقاية، نصائح طبية، رجيم، تغذية، رياضة، صحة نفسية">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="موسوعة الصحة والعافية - معلومات طبية موثوقة" />
+    <meta property="og:description" content="أحدث المقالات الصحية حول الأمراض الشائعة وطرق الوقاية والعلاج من مصادر طبية موثوقة">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-almwal.netlify.app/health" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>موسوعة الصحة والعافية - أمراض شائعة وعلاجات ونصائح وقائية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heartbeat"></i> موسوعة الصحة والعافية</h1>
+            <p>معلومات طبية موثوقة ونصائح صحية لأسلوب حياة أفضل</p>
+        </div>
+    </header>
+
+   <nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+            <li class="active"><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+            <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+            <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+            <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+        </ul>
+        
+        <div class="search-box">
+            <form onsubmit="handleSearch(event)" role="search">
+                <input type="text" id="searchQuery" placeholder="ابحث عن موضوع صحي..." aria-label="بحث عن محتوى صحي" value="">
+                <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+// استخراج كلمة البحث من URL إن وجدت (للعودة للبحث السابق)
+const urlParams = new URLSearchParams(window.location.search);
+const searchParam = urlParams.get('q');
+if(searchParam) {
+    document.getElementById('searchQuery').value = searchParam;
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('searchQuery').value.trim();
+    
+    if(query) {
+        // توجيه إلى صفحة البحث مع الاحتفاظ بكلمة البحث
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    } else {
+        alert('الرجاء إدخال كلمة بحث');
+    }
+}
+</script>
+
+    <main class="container">
+        <section class="featured-articles">
+            <h2><i class="fas fa-medal"></i> أهم المواضيع الصحية الأكثر بحثاً</h2>
+            <div class="articles-grid">
+                
+              <!-- مقالة 1 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض السكري المبكرة">
+    <div class="article-content">
+        <h3>10 علامات مبكرة للسكري لا يجب تجاهلها</h3>
+        <p>اكتشف الأعراض الخفية التي قد تشير إلى الإصابة بمرض السكري وكيفية الوقاية منه</p>
+        <a href="diabetes-early-signs.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 2 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد شرب الماء">
+    <div class="article-content">
+        <h3>الكمية الصحيحة لشرب الماء يومياً حسب وزنك</h3>
+        <p>دليل علمي لكميات الماء المثالية وفوائدها في إنقاص الوزن وتحسين الصحة العامة</p>
+        <a href="water-intake-guide.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 3 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أطعمة لخفض الكوليسترول">
+    <div class="article-content">
+        <h3>15 نوعاً من الطعام تخفض الكوليسترول الضار بشكل طبيعي</h3>
+        <p>قائمة بأفضل الأطعمة التي تقلل الكوليسترول وتحسن صحة القلب وفق أحدث الدراسات</p>
+        <a href="cholesterol-lowering-foods.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 4 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="تمارين لعلاج آلام الظهر">
+    <div class="article-content">
+        <h3>7 تمارين بسيطة تخلصك من آلام الظهر في أسبوع</h3>
+        <p>تمارين يوصي بها أخصائيو العلاج الطبيعي لعلاج آلام الظهر المزمنة بدون أدوية</p>
+        <a href="back-pain-exercises.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 5 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض نقص فيتامين د">
+    <div class="article-content">
+        <h3>أعراض نقص فيتامين د الخطيرة وطرق العلاج الفعالة</h3>
+        <p>كيف تعرف أنك تعاني من نقص فيتامين د وما هي الجرعات الموصى بها يومياً؟</p>
+        <a href="vitamin-d-deficiency.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 6 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الصيام المتقطع">
+    <div class="article-content">
+        <h3>الفوائد المذهلة للصيام المتقطع وأنواعه المختلفة</h3>
+        <p>دليل علمي عن كيفية عمل الصيام المتقطع وفوائده في إنقاص الوزن وتحسين الصحة</p>
+        <a href="intermittent-fasting-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 7 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج القولون العصبي">
+    <div class="article-content">
+        <h3>نظام غذائي متكامل لعلاج القولون العصبي نهائياً</h3>
+        <p>أطعمة يجب تجنبها وأخرى مفيدة لتخفيف أعراض القولون العصبي بشكل طبيعي</p>
+        <a href="ibs-diet-plan.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 8 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1588615419957-5c0b1fe6f040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض ضغط الدم المرتفع">
+    <div class="article-content">
+        <h3>علامات ارتفاع ضغط الدم الصامت وكيفية الوقاية منه</h3>
+        <p>اكتشف الأعراض الخفية لارتفاع الضغط وطرق خفضه طبيعياً بدون أدوية</p>
+        <a href="high-blood-pressure-signs.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 9 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1604977048616-4a81f58c3f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الزنجبيل الصحية">
+    <div class="article-content">
+        <h3>7 فوائد مذهلة للزنجبيل ستجعلك تتناوله يومياً</h3>
+        <p>كيف يمكن للزنجبيل أن يحسن صحتك من المناعة إلى الهضم وفق أحدث الأبحاث</p>
+        <a href="ginger-health-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 10 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج الأرق وصعوبة النوم">
+    <div class="article-content">
+        <h3>طرق طبيعية لعلاج الأرق وتحسين جودة النوم</h3>
+        <p>نصائح علمية وأعشاب طبيعية تساعدك على النوم بعمق بدون أدوية</p>
+        <a href="insomnia-natural-remedies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 11 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض نقص الحديد">
+    <div class="article-content">
+        <h3>كيف تعرف أنك تعاني من فقر الدم؟ الأعراض والعلاج</h3>
+        <p>علامات نقص الحديد في الجسم وأفضل الأطعمة الغنية بالحديد لعلاج الأنيميا</p>
+        <a href="iron-deficiency-anemia.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 12 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الرياضة اليومية">
+    <div class="article-content">
+        <h3>10 فوائد صحية مدهشة لممارسة الرياضة 30 دقيقة يومياً</h3>
+        <p>كيف تغير الرياضة المنتظمة صحتك الجسدية والعقلية وفق أحدث الدراسات</p>
+        <a href="daily-exercise-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 13 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج حب الشباب">
+    <div class="article-content">
+        <h3>وصفات طبيعية لعلاج حب الشباب في أسبوع</h3>
+        <p>خلطات منزلية فعالة للتخلص من البثور وآثارها باستخدام مكونات طبيعية</p>
+        <a href="acne-home-remedies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 14 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض جرثومة المعدة">
+    <div class="article-content">
+        <h3>علامات الإصابة بجرثومة المعدة وطرق العلاج الفعالة</h3>
+        <p>كيف تعرف أنك مصاب بجرثومة المعدة وما هي الأطعمة التي تساعد في القضاء عليها؟</p>
+        <a href="h-pylori-symptoms.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 15 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الثوم الصحية">
+    <div class="article-content">
+        <h3>الفوائد الطبية المثبتة للثوم وكيفية تناوله بشكل صحيح</h3>
+        <p>كيف يستخدم الثوم لتعزيز المناعة وخفض الكوليسترول وتحسين الدورة الدموية</p>
+        <a href="garlic-health-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 16 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج تساقط الشعر">
+    <div class="article-content">
+        <h3>أسباب تساقط الشعر وطرق علاجه طبيعياً</h3>
+        <p>خلطات طبيعية وفيتامينات ضرورية لوقف تساقط الشعر وتحفيز نموه من جديد</p>
+        <a href="hair-loss-treatment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 17 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1599458252573-56ae36120de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض الاكتئاب">
+    <div class="article-content">
+        <h3>علامات الاكتئاب الخفية التي لا يعرفها الكثيرون</h3>
+        <p>كيف تفرق بين الحزن العادي والاكتئاب السريري ومتى يجب استشارة الطبيب؟</p>
+        <a href="hidden-depression-signs.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 18 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الشاي الأخضر">
+    <div class="article-content">
+        <h3>7 فوائد مذهلة للشاي الأخضر ستجعلك تتناوله يومياً</h3>
+        <p>كيف يؤثر الشاي الأخضر على إنقاص الوزن وصحة القلب والوقاية من الأمراض؟</p>
+        <a href="green-tea-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 19 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج النحافة">
+    <div class="article-content">
+        <h3>نظام غذائي صحي لزيادة الوزن بشكل طبيعي وآمن</h3>
+        <p>أطعمة غنية بالسعرات الصحية لزيادة الوزن بدون أضرار مع تمارين مقترحة</p>
+        <a href="healthy-weight-gain.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 20 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض القلق النفسي">
+    <div class="article-content">
+        <h3>كيف تعرف أنك تعاني من اضطراب القلق؟ الأعراض والعلاج</h3>
+        <p>علامات القلق المرضي وتمارين بسيطة تساعد في تخفيف التوتر والقلق اليومي</p>
+        <a href="anxiety-disorder-signs.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 21 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد العسل الصحية">
+    <div class="article-content">
+        <h3>الفوائد الطبية للعسل الطبيعي وأنواعه المختلفة</h3>
+        <p>كيف يستخدم العسل في علاج الجروح والسعال وتحسين المناعة وفق الأبحاث</p>
+        <a href="honey-health-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 22 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج الصداع النصفي">
+    <div class="article-content">
+        <h3>طرق طبيعية لعلاج الصداع النصفي بدون مسكنات</h3>
+        <p>أسباب الصداع النصفي وأفضل الزيوت العطرية والتمارين لتخفيف الألم</p>
+        <a href="migraine-natural-remedies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 23 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض نقص المغنيسيوم">
+    <div class="article-content">
+        <h3>علامات نقص المغنيسيوم في الجسم وأهم مصادره الغذائية</h3>
+        <p>كيف يؤثر نقص المغنيسيوم على صحتك وما هي الجرعة اليومية الموصى بها؟</p>
+        <a href="magnesium-deficiency.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 24 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد الزبادي الصحية">
+    <div class="article-content">
+        <h3>لماذا يجب تناول الزبادي يومياً؟ فوائد مذهلة للجسم</h3>
+        <p>كيف يحسن الزبادي صحة الجهاز الهضمي والمناعة ويساعد في إنقاص الوزن</p>
+        <a href="yogurt-daily-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 25 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج آلام المفاصل">
+    <div class="article-content">
+        <h3>أفضل العلاجات الطبيعية لآلام المفاصل والتهاب العظام</h3>
+        <p>أعشاب وتمارين ووصفات منزلية لتخفيف آلام المفاصل وتحسين حركتها</p>
+        <a href="joint-pain-remedies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 26 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض حصوات الكلى">
+    <div class="article-content">
+        <h3>كيف تعرف أنك مصاب بحصوات الكلى؟ الأعراض والوقاية</h3>
+        <p>علامات تكون الحصوات في الكلى وأفضل المشروبات الطبيعية لمنع تكوينها</p>
+        <a href="kidney-stones-symptoms.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 27 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد زيت الزيتون">
+    <div class="article-content">
+        <h3>الفوائد الصحية المثبتة لزيت الزيتون البكر الممتاز</h3>
+        <p>كيف يحمي زيت الزيتون القلب ويحارب الالتهابات ويحسن صحة الدماغ؟</p>
+        <a href="olive-oil-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 28 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج حساسية الجلد">
+    <div class="article-content">
+        <h3>وصفات طبيعية لعلاج الحساسية الجلدية والحكة</h3>
+        <p>مكونات منزلية بسيطة تساعد في تهدئة البشرة المتهيجة وتخفيف الالتهاب</p>
+        <a href="skin-allergy-remedies.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 29 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض نقص فيتامين ب12">
+    <div class="article-content">
+        <h3>علامات نقص فيتامين ب12 الخطيرة ومصادره الغذائية</h3>
+        <p>كيف يؤثر نقص B12 على الأعصاب والمزاج وما هي الجرعة اليومية المطلوبة؟</p>
+        <a href="vitamin-b12-deficiency.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 30 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1604977048616-4a81f58c3f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد القرفة الصحية">
+    <div class="article-content">
+        <h3>7 فوائد صحية مذهلة للقرفة ستجعلك تتناولها يومياً</h3>
+        <p>كيف تساعد القرفة في خفض السكر والكوليسترول وتحسين الدورة الدموية؟</p>
+        <a href="cinnamon-health-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 31 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علاج الدوخة والدوار">
+    <div class="article-content">
+        <h3>أسباب الدوخة المفاجئة وطرق علاجها طبيعياً</h3>
+        <p>متى تكون الدوخة خطيرة؟ تمارين وأعشاب تساعد في علاج الدوار وتحسين التوازن</p>
+        <a href="dizziness-causes-treatment.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 32 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أعراض التهاب الكبد">
+    <div class="article-content">
+        <h3>علامات التهاب الكبد الفيروسي التي لا يجب تجاهلها</h3>
+        <p>كيف تعرف أنك مصاب بالتهاب الكبد وما هي الفحوصات اللازمة للكشف المبكر؟</p>
+        <a href="hepatitis-symptoms.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 33 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="فوائد بذور الكتان">
+    <div class="article-content">
+        <h3>الفوائد الصحية المذهلة لبذور الكتان وكيفية استخدامها</h3>
+        <p>كيف تساعد بذور الكتان في تحسين الهضم والوقاية من الأمراض المزمنة</p>
+        <a href="flaxseeds-health-benefits.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+                           </div>
+        </section>
+
+        </section>
+    </main>
+
+     <footer>
+    <div class="container">
+        <div class="footer-content">
+            <!-- قسم "عن الموسوعة" مع بيانات منظمة (Schema) -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                <h3>عن الموسوعة</h3>
+                <p itemprop="description">موسوعة العلاقات توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً في عالم الحب والعلاقات.</p>
+                <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                <meta itemprop="name" content="موسوعة العلاقات">
+            </div>
+
+            <!-- قسم الروابط مع روابط داخلية مُحسّنة -->
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                    <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                    <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                    <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                    <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- قسم النشرة البريدية مع إمكانية الوصول -->
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك ليصلك جديد الموسوعة</p>
+                <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                    <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                </form>
+            </div>
+
+            <!-- قسم وسائل التواصل مع بيانات منظمة -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- حقوق النشر مع بيانات تاريخية -->
+        <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+            <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+            <span itemprop="copyrightHolder">موسوعة العلاقات</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+      let lastScrollTop = 0;
+
+      const nav = document.querySelector("nav");
+      const searchBox = document.querySelector(".search-box");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+          nav.style.transform = "translateY(-100%)";
+          if (searchBox) searchBox.style.top = "0";
+        } else {
+          // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+          nav.style.transform = "translateY(0)";
+          if (searchBox) searchBox.style.top = "100%";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+</body>
+</html>

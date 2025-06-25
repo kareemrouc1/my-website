@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="description" content="صفحة المساهمة مع موسوعة التوثيق - كيف يمكنك المشاركة في إثراء المحتوى العربي الموثوق">
+    <meta name="keywords" content="المساهمة, مشاركة المحتوى, التحرير, موسوعة التوثيق, إثراء المحتوى العربي">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="المساهمة معنا - موسوعة التوثيق" />
+    <meta property="og:description" content="كيف يمكنك المشاركة في إثراء المحتوى العربي الموثوق" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-altwsek.netlify.app/help" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>المساهمة معنا - موسوعة التوثيق</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contribution-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .contribution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contribution-icon {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .benefits-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .benefits-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #27ae60;
+            margin-left: 10px;
+        }
+        .steps-timeline {
+            position: relative;
+            padding-right: 30px;
+        }
+        .steps-timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 15px;
+            height: 100%;
+            width: 2px;
+            background: #3498db;
+        }
+        .step {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .step:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: -30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #3498db;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 2px #3498db;
+        }
+        .guidelines-box {
+            background: #e8f4fc;
+            border-right: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .guidelines-box h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> موسوعة التوثيق</h1>
+            <p>إجابات موثقة للأسئلة الأكثر بحثاً على جوجل</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+                <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+                <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+                <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+                <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+            </ul>
+            
+            <div class="search-box">
+                <form onsubmit="handleSearch(event)" role="search">
+                    <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                    <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="contribution-page">
+            <h1><i class="fas fa-hands-helping"></i> المساهمة معنا</h1>
+            
+            <section class="intro-section">
+                <p>مرحباً بك في صفحة المساهمة مع موسوعة التوثيق! نحن نؤمن بقوة المجتمع في إثراء المحتوى العربي الموثوق. هنا يمكنك معرفة كيف يمكنك المشاركة في بناء أكبر موسوعة عربية موثوقة.</p>
+            </section>
+            
+            <div class="contribution-grid">
+                <section class="contribution-types">
+                    <h2><i class="fas fa-lightbulb"></i> كيف يمكنك المساهمة؟</h2>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <h3>كتابة مقالات جديدة</h3>
+                        <p>شارك بمعرفتك وخبرتك في مجال تخصصك لتعم الفائدة على الجميع.</p>
+                    </div>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-edit"></i></div>
+                        <h3>تحرير وتطوير مقالات موجودة</h3>
+                        <p>ساعد في تحسين جودة المقالات الحالية بإضافة معلومات أو تصحيح أخطاء.</p>
+                    </div>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-language"></i></div>
+                        <h3>الترجمة</h3>
+                        <p>ترجم مقالات موثوقة من لغات أخرى إلى العربية مع الحفاظ على الدقة.</p>
+                    </div>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-check-double"></i></div>
+                        <h3>المراجعة والتدقيق</h3>
+                        <p>ساعد في مراجعة المحتوى للتأكد من صحته وسلامة المصادر.</p>
+                    </div>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-bug"></i></div>
+                        <h3>الإبلاغ عن الأخطاء</h3>
+                        <p>أخبرنا إذا وجدت أي معلومات غير دقيقة أو تحتاج للتحديث.</p>
+                    </div>
+                    
+                    <div class="contribution-card">
+                        <div class="contribution-icon"><i class="fas fa-share-alt"></i></div>
+                        <h3>نشر المعرفة</h3>
+                        <p>ساعد في نشر المقالات المفيدة على وسائل التواصل الاجتماعي.</p>
+                    </div>
+                </section>
+                
+                <aside class="contribution-benefits">
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-gift"></i> فوائد المساهمة</h3>
+                        <ul class="benefits-list">
+                            <li>فرصة لتعزيز سيرتك الذاتية وخبراتك</li>
+                            <li>الحصول على شهادة مساهمة معتمدة</li>
+                            <li>الظهور كمساهم في المقالات التي تشارك بها</li>
+                            <li>الوصول إلى مجتمع من المحررين والخبراء</li>
+                            <li>تطوير مهاراتك في البحث والكتابة</li>
+                            <li>المساهمة في إثراء المحتوى العربي على الإنترنت</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h3>
+                        <div class="faq-item">
+                            <h4>هل أحتاج إلى خبرة سابقة للمساهمة؟</h4>
+                            <p>لا يشترط خبرة سابقة، ولكن نرحب بالخبراء في مجالاتهم.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>هل يمكن المساهمة بأي موضوع؟</h4>
+                            <p>نعم، بشرط أن يكون الموضوع مفيداً ويلبي معايير الجودة.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>كيف يتم تقييم المساهمات؟</h4>
+                            <p>يتم مراجعة كل مساهمة من قبل فريق التحرير قبل النشر.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <section class="contribution-process">
+                <h2><i class="fas fa-list-ol"></i> خطوات المساهمة</h2>
+                
+                <div class="steps-timeline">
+                    <div class="step">
+                        <h3>التسجيل في المنصة</h3>
+                        <p>قم بإنشاء حساب مساهم من خلال النموذج المخصص لذلك.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>اختيار مجال المساهمة</h3>
+                        <p>حدد المجال الذي ترغب في المساهمة فيه حسب اهتماماتك وخبراتك.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>تقديم المساهمة</h3>
+                        <p>أرسل مقالتك أو تعديلاتك من خلال نظامنا الإلكتروني.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>المراجعة والتدقيق</h3>
+                        <p>سيقوم فريقنا بمراجعة مساهمتك والتواصل معك إذا لزم الأمر.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h3>النشر</h3>
+                        <p>بعد الموافقة، سيتم نشر مساهمتك مع ذكر اسمك كمشارك.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="guidelines-section">
+                <h2><i class="fas fa-clipboard-check"></i> إرشادات المساهمة</h2>
+                
+                <div class="guidelines-box">
+                    <h3>معايير الجودة</h3>
+                    <ul>
+                        <li>الدقة العلمية والمعلوماتية</li>
+                        <li>الوضوح وسهولة الفهم</li>
+                        <li>التنظيم والترتيب المنطقي</li>
+                        <li>الالتزام بالموضوعية والحياد</li>
+                        <li>الاستشهاد بمصادر موثوقة</li>
+                    </ul>
+                </div>
+                
+                <div class="guidelines-box">
+                    <h3>ما يجب تجنبه</h3>
+                    <ul>
+                        <li>المحتوى المنسوخ أو المنتهك لحقوق الملكية</li>
+                        <li>الآراء الشخصية غير المدعمة بأدلة</li>
+                        <li>المعلومات غير المؤكدة أو الشائعات</li>
+                        <li>المحتوى الترويجي أو الإعلاني</li>
+                        <li>المحتوى غير الأخلاقي أو غير المناسب</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <h2><i class="fas fa-rocket"></i> مستعد للبدء؟</h2>
+                <p>انضم إلينا الآن وساهم في إثراء المحتوى العربي الموثوق!</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="cta-button primary"><i class="fas fa-user-plus"></i> تسجيل مساهم جديد</a>
+                    <a href="login.html" class="cta-button secondary"><i class="fas fa-sign-in-alt"></i> دخول المساهمين</a>
+                    <a href="contacted.html" class="cta-button"><i class="fas fa-envelope"></i> تواصل معنا</a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                    <h3>عن الموسوعة</h3>
+                    <p itemprop="description">موسوعة التوثيق توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث.</p>
+                    <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                    <meta itemprop="name" content="موسوعة التوثيق">
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                        <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                        <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                        <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                        <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك ليصلك جديد الموسوعة</p>
+                    <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                        <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                    </form>
+                </div>
+
+                <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+                <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+                <span itemprop="copyrightHolder">موسوعة التوثيق</span>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('q');
+        if(searchParam) {
+            document.getElementById('searchQuery').value = searchParam;
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchQuery').value.trim();
+            if(query) {
+                window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            } else {
+                alert('الرجاء إدخال كلمة بحث');
+            }
+        }
+        
+        let lastScrollTop = 0;
+        const nav = document.querySelector("nav");
+        const searchBox = document.querySelector(".search-box");
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                nav.style.transform = "translateY(-100%)";
+                if (searchBox) searchBox.style.top = "0";
+            } else {
+                nav.style.transform = "translateY(0)";
+                if (searchBox) searchBox.style.top = "100%";
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

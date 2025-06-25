@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="description" content="الأسئلة الشائعة حول موسوعة التوثيق - إجابات عن كيفية استخدام الموقع، سياسة المحتوى، والمزيد">
+    <meta name="keywords" content="أسئلة شائعة, موسوعة التوثيق, الأسئلة المتكررة, سياسة المحتوى, كيفية الاستخدام">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="الأسئلة الشائعة - موسوعة التوثيق" />
+    <meta property="og:description" content="إجابات عن الأسئلة المتكررة حول استخدام موسوعة التوثيق وسياستها" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-altwsek.netlify.app/question" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>الأسئلة الشائعة - موسوعة التوثيق</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> موسوعة التوثيق</h1>
+            <p>إجابات موثقة للأسئلة الأكثر بحثاً على جوجل</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+                <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+                <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+                <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+                <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+            </ul>
+            
+            <div class="search-box">
+                <form onsubmit="handleSearch(event)" role="search">
+                    <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                    <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="faq-page">
+            <h1><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h1>
+            
+            <div class="faq-intro">
+                <p>هنا تجد إجابات للأسئلة الأكثر تكراراً حول موسوعة التوثيق وكيفية استخدامها. إذا كان لديك سؤال آخر، لا تتردد في <a href="contacted.html">الاتصال بنا</a>.</p>
+            </div>
+            
+            <div class="faq-categories">
+                <h2>تصفح الأسئلة حسب الموضوع:</h2>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="general">عام</button>
+                    <button class="category-btn" data-category="content">المحتوى</button>
+                    <button class="category-btn" data-category="usage">كيفية الاستخدام</button>
+                    <button class="category-btn" data-category="technical">فني</button>
+                    <button class="category-btn" data-category="contributions">المساهمات</button>
+                </div>
+            </div>
+            
+            <div class="faq-sections">
+                <section class="faq-section" id="general-faq">
+                    <h2><i class="fas fa-info-circle"></i> أسئلة عامة</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>ما هي موسوعة التوثيق؟</h3>
+                            <p>موسوعة التوثيق هي منصة معرفية تقدم إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث. نحرص على تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>من يقف وراء موسوعة التوثيق؟</h3>
+                            <p>تأسست الموسوعة بواسطة كريم أبو روق وهو مطور ويب وخبير في تحسين محركات البحث، ويعمل معه فريق من الكتاب المتخصصين في مختلف المجالات لضمان جودة المحتوى.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>هل هناك رسوم لاستخدام الموقع؟</h3>
+                            <p>لا، موسوعة التوثيق مجانية بالكامل لجميع الزوار ولا توجد أي رسوم للوصول إلى المحتوى. نحن نؤمن بإتاحة المعرفة الموثوقة للجميع.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="faq-section" id="content-faq">
+                    <h2><i class="fas fa-file-alt"></i> أسئلة عن المحتوى</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>كيف يتم التحقق من صحة المحتوى؟</h3>
+                            <p>يخضع كل محتوى لمراجعة دقيقة من قبل فريق المحررين المتخصصين، مع الاعتماد على مصادر موثوقة مثل الأبحاث العلمية المنشورة، التقارير الرسمية، وخبراء في المجال.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>كم مرة يتم تحديث المحتوى؟</h3>
+                            <p>نقوم بمراجعة المحتوى بشكل دوري (كل 3-6 أشهر) أو عند وجود تحديثات مهمة في المجال لتضمن دقة المعلومات وحداثتها.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>كيف يمكنني الإبلاغ عن خطأ في المحتوى؟</h3>
+                            <p>يمكنك استخدام <a href="contacted.html">صفحة الاتصال بنا</a> واختيار "اقتراح أو تصحيح محتوى" كموضوع الرسالة، مع ذكر رابط المقالة وتفاصيل التصحيح المطلوب وسنقوم بمراجعته في أقرب وقت.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="faq-section" id="usage-faq">
+                    <h2><i class="fas fa-user"></i> كيفية الاستخدام</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>كيف أبحث عن موضوع معين؟</h3>
+                            <p>يمكنك استخدام مربع البحث في أعلى الصفحة، أو تصفح الأقسام الرئيسية من القائمة. كما يمكنك استخدام علامات التصنيف الموجودة في نهاية كل مقالة للعثور على محتوى ذو صلة.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>هل يمكنني حفظ المقالات للرجوع إليها لاحقاً؟</h3>
+                            <p>نعم، يمكنك استخدام ميزة "المفضلة" في متصفحك لحفظ الصفحات، أو مشاركة الرابط عبر البريد الإلكتروني أو تطبيقات المراسلة. نحن نعمل على إضافة نظام حسابات لتوفير ميزة الحفظ على الموقع مستقبلاً.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>كيف يمكنني مشاركة المقال مع الآخرين؟</h3>
+                            <p>يوجد في نهاية كل مقالة أزرار مشاركة للفيسبوك، تويتر، واتساب وغيرها. يمكنك أيضاً نسخ رابط المقالة ومشاركته مباشرة.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="faq-section" id="technical-faq">
+                    <h2><i class="fas fa-laptop-code"></i> أسئلة فنية</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>هل الموقع متوافق مع الجوال؟</h3>
+                            <p>نعم، موسوعة التوثيق مصممة لتكون متجاوبة مع جميع أحجام الشاشات من أجهزة الكمبيوتر إلى الهواتف الذكية والأجهزة اللوحية.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>لماذا لا يعمل الموقع بشكل صحيح على متصفحي؟</h3>
+                            <p>نوصي باستخدام أحدث نسخة من المتصفحات الحديثة مثل Chrome، Firefox، Safari أو Edge. إذا واجهت مشكلة، يمكنك محاولة مسح ذاكرة التخزين المؤقت أو <a href="contacted.html">الإبلاغ عن المشكلة</a>.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>هل يوجد تطبيق للهاتف؟</h3>
+                            <p>حالياً لا يوجد تطبيق خاص، ولكن الموقع مصمم ليعمل كتطبيق عند إضافته إلى شاشة الهاتف الرئيسية (PWA). يمكنك استخدامه دون اتصال بالإنترنت بعد زيارة الصفحات مرة واحدة.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="faq-section" id="contributions-faq">
+                    <h2><i class="fas fa-hands-helping"></i> المساهمات</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>هل تقبلون مساهمات من كتاب خارجيين؟</h3>
+                            <p>نعم، نرحب بمساهمات الكتاب المحترفين في مختلف المجالات. يرجى إرسال عينات من أعمالك السابقة عبر <a href="contacted.html">نموذج التواصل</a> مع ذكر "مساهمة محتوى" كموضوع.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>كيف يمكنني دعم الموسوعة مادياً؟</h3>
+                            <p>حالياً لا نقبل تبرعات مالية، ولكن يمكنك دعمنا بمشاركة المحتوى مع الآخرين أو تقديم اقتراحات لتحسين الموقع. سنعلن عن أي تغييرات في هذه السياسة عبر الموقع.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>هل يمكنني ترجمة المحتوى إلى لغات أخرى؟</h3>
+                            <p>نعم، نرحب بالترجمات عالية الجودة. يرجى التواصل معنا أولاً لمناقشة التفاصيل والحصول على الموافقة قبل البدء بأي ترجمة.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="still-questions">
+                <h2><i class="fas fa-comment-dots"></i> لا زلت لديك أسئلة؟</h2>
+                <p>إذا لم تجد إجابة لسؤالك هنا، فريق الدعم لدينا مستعد لمساعدتك. <a href="contacted.html" class="contact-link">اتصل بنا الآن</a> وسنكون سعداء بالرد على استفساراتك.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                    <h3>عن الموسوعة</h3>
+                    <p itemprop="description">موسوعة التوثيق توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث.</p>
+                    <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                    <meta itemprop="name" content="موسوعة التوثيق">
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                        <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                        <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                        <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                        <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك ليصلك جديد الموسوعة</p>
+                    <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                        <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                    </form>
+                </div>
+
+                <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+                <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+                <span itemprop="copyrightHolder">موسوعة التوثيق</span>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // تحديث سنة حقوق النشر تلقائياً
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // معالجة البحث (كما في الصفحة الأصلية)
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('q');
+        if(searchParam) {
+            document.getElementById('searchQuery').value = searchParam;
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchQuery').value.trim();
+            
+            if(query) {
+                window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            } else {
+                alert('الرجاء إدخال كلمة بحث');
+            }
+        }
+        
+        // فلترة الأسئلة حسب التصنيف
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // إزالة التنشيط من جميع الأزرار
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                
+                // تنشيط الزر المحدد
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                
+                // إخفاء جميع الأقسام
+                document.querySelectorAll('.faq-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // إظهار القسم المحدد أو جميع الأقسام إذا كان "عام"
+                if(category === 'general') {
+                    document.querySelectorAll('.faq-section').forEach(section => {
+                        section.style.display = 'block';
+                    });
+                } else {
+                    document.getElementById(`${category}-faq`).style.display = 'block';
+                }
+                
+                // التمرير إلى الأعلى
+                window.scrollTo({
+                    top: document.querySelector('.faq-sections').offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // تأثير التمرير لإخفاء/إظهار شريط التنقل
+        let lastScrollTop = 0;
+        const nav = document.querySelector("nav");
+        const searchBox = document.querySelector(".search-box");
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                nav.style.transform = "translateY(-100%)";
+                if (searchBox) searchBox.style.top = "0";
+            } else {
+                nav.style.transform = "translateY(0)";
+                if (searchBox) searchBox.style.top = "100%";
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

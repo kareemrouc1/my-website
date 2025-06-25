@@ -357,3 +357,30 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
+// معالجة إرسال نموذج التواصل
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            alert('شكراً لتواصلكم! تم استلام رسالتك وسيتم الرد في أقرب وقت ممكن.');
+            form.reset();
+        } else {
+            throw new Error('فشل في إرسال النموذج');
+        }
+    } catch (error) {
+        alert('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى لاحقاً.');
+        console.error('Error:', error);
+    }
+});

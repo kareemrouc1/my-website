@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="description" content="كيف تقرأ البيانات المالية مثل المحترفين في 7 أيام - تعلم أساسيات التحليل المالي وقراءة التقارير المالية لاتخاذ قرارات استثمارية ذكية">
+<meta name="keywords" content="قراءة البيانات المالية, التحليل المالي, التقارير المالية, قرارات استثمارية, محترفين ماليين">
+<meta name="author" content="Kareem Rouc">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="كيف تقرأ البيانات المالية مثل المحترفين في 7 أيام" />
+<meta property="og:description" content="تعلم أساسيات التحليل المالي وقراءة التقارير المالية لاتخاذ قرارات استثمارية ذكية" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://mawsoat-altwsek.netlify.app/article4" />
+<meta property="og:locale" content="ar_AR" />
+<link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<title>كيف تقرأ البيانات المالية مثل المحترفين في 7 أيام</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> موسوعة التوثيق</h1>
+            <p>إجابات موثقة للأسئلة الأكثر بحثاً على جوجل</p>
+        </div>
+    </header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+            <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+            <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+            <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+            <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+        </ul>
+        
+        <div class="search-box">
+            <form onsubmit="handleSearch(event)" role="search">
+                <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+// استخراج كلمة البحث من URL إن وجدت (للعودة للبحث السابق)
+const urlParams = new URLSearchParams(window.location.search);
+const searchParam = urlParams.get('q');
+if(searchParam) {
+    document.getElementById('searchQuery').value = searchParam;
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('searchQuery').value.trim();
+    
+    if(query) {
+        // توجيه إلى صفحة البحث مع الاحتفاظ بكلمة البحث
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    } else {
+        alert('الرجاء إدخال كلمة بحث');
+    }
+}
+</script>
+<main class="container">
+    <article class="detailed-article">
+        <h1>كيف تقرأ البيانات المالية مثل المحترفين في 7 أيام</h1>
+        
+        <div class="article-meta">
+            <span><i class="far fa-calendar-alt"></i> 22 يونيو 2025</span>
+            <span><i class="far fa-eye"></i> 15,320 مشاهدة</span>
+            <span><i class="fas fa-star"></i> 4.9/5 (312 تقييم)</span>
+        </div>
+        
+           <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="وثائق مالية وجداول بيانات" class="featured-image">
+        <div class="article-content">
+            <section>
+                <h2>مقدمة: لماذا تعتبر قراءة البيانات المالية مهارة أساسية؟</h2>
+                <p>في عالم الأعمال والاستثمار، تعد القدرة على فهم البيانات المالية وتحليلها من أهم المهارات التي تميز المحترفين. تشير الدراسات إلى أن 82% من المستثمرين الناجحين يمتلكون مهارات متقدمة في قراءة التقارير المالية.</p>
+                <p>في هذا الدليل الشامل، سنأخذك في رحلة تعليمية مكثفة لمدة 7 أيام لاكتساب مهارات قراءة البيانات المالية مثل المحترفين، بدءًا من أساسيات القوائم المالية وصولاً إلى تحليل النسب المالية المتقدمة.</p>
+            </section>
+            
+            <section>
+                <h2>اليوم الأول: فهم القوائم المالية الأساسية</h2>
+                
+                <h3>1. قائمة الدخل (Income Statement)</h3>
+                <p>تظهر أداء الشركة خلال فترة زمنية محددة، وتتضمن الإيرادات والمصروفات والأرباح.</p>
+                <p>مكونات رئيسية:</p>
+                <ul>
+                    <li>إجمالي الإيرادات</li>
+                    <li>تكلفة البضائع المباعة</li>
+                    <li>إجمالي الربح</li>
+                    <li>مصروفات التشغيل</li>
+                    <li>صافي الدخل</li>
+                </ul>
+                
+                <h3>2. الميزانية العمومية (Balance Sheet)</h3>
+                <p>تقدم لقطة للوضع المالي للشركة في لحظة زمنية معينة، وتوضح ما تمتلكه (الأصول) وما تدين به (الخصوم).</p>
+                
+                <h3>3. قائمة التدفقات النقدية (Cash Flow Statement)</h3>
+                <p>تتبع حركة النقود الداخلة والخارجة من الشركة، وتنقسم إلى ثلاثة أقسام: التشغيل، الاستثمار، التمويل.</p>
+            </section>
+            
+            <section>
+                <h2>اليوم الثاني: تحليل القوائم المالية الأساسية</h2>
+                
+                <div class="info-box">
+                    <h4>نقاط رئيسية للتحليل:</h4>
+                    <ul>
+                        <li><strong>الاتجاهات:</strong> مقارنة البيانات على مدى عدة فترات</li>
+                        <li><strong>النسب المئوية:</strong> تحويل الأرقام إلى نسب مئوية من الإيرادات</li>
+                        <li><strong>المقارنة مع المنافسين:</strong> قياس الأداء النسبي</li>
+                        <li><strong>معايير الصناعة:</strong> مقارنة الأداء مع متوسطات الصناعة</li>
+                    </ul>
+                </div>
+                
+                <h3>نصائح للتحليل الفعال:</h3>
+                <ul>
+                    <li>ابحث عن الاتجاهات وليس الأرقام المفردة</li>
+                    <li>ركز على جودة الأرباح وليس كميتها فقط</li>
+                    <li>تحقق من التناقضات بين القوائم المالية</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>اليوم الثالث: النسب المالية الأساسية</h2>
+                
+                <div class="comparison-table">
+                    <table>
+                        <tr>
+                            <th>نوع النسبة</th>
+                            <th>طريقة الحساب</th>
+                            <th>الدلالة</th>
+                        </tr>
+                        <tr>
+                            <td>نسبة السيولة</td>
+                            <td>الأصول المتداولة / الخصوم المتداولة</td>
+                            <td>قدرة الشركة على سداد التزاماتها القصيرة</td>
+                        </tr>
+                        <tr>
+                            <td>نسبة الدين إلى حقوق الملكية</td>
+                            <td>إجمالي الديون / حقوق المساهمين</td>
+                            <td>هيكل التمويل ومستوى المديونية</td>
+                        </tr>
+                        <tr>
+                            <td>هامش الربح الصافي</td>
+                            <td>صافي الدخل / الإيرادات</td>
+                            <td>كفاءة تحويل الإيرادات إلى أرباح</td>
+                        </tr>
+                        <tr>
+                            <td>العائد على الأصول (ROA)</td>
+                            <td>صافي الدخل / إجمالي الأصول</td>
+                            <td>كفاءة استخدام الأصول في توليد الأرباح</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+            <section>
+                <h2>اليوم الرابع: قراءة الحواشي والملاحظات</h2>
+                
+                <h3>1. أهمية الحواشي المالية</h3>
+                <p>تقدم تفاصيل إضافية وشرحًا للسياسات المحاسبية المستخدمة في إعداد القوائم المالية.</p>
+                
+                <h3>2. العناصر الرئيسية في الحواشي</h3>
+                <p>• السياسات المحاسبية • التفاصيل حول بنود معينة • الالتزامات المحتملة • معلومات عن المخصصات</p>
+                
+                <h3>3. كيفية قراءة الحواشي بفعالية</h3>
+                <p>• ابحث عن التغييرات في السياسات المحاسبية • تحقق من الالتزامات غير الظاهرة في الميزانية • ادرس التفاصيل حول الأصول والاستثمارات</p>
+            </section>
+            
+            <section class="conclusion">
+                <h2>الخلاصة: خطة 7 أيام لإتقان قراءة البيانات المالية</h2>
+                <ol>
+                    <li>اليوم 1: فهم القوائم المالية الأساسية</li>
+                    <li>اليوم 2: تحليل القوائم المالية</li>
+                    <li>اليوم 3: تعلم النسب المالية الأساسية</li>
+                    <li>اليوم 4: قراءة الحواشي والملاحظات</li>
+                    <li>اليوم 5: تحليل التدفقات النقدية</li>
+                    <li>اليوم 6: اكتشاف الإشارات التحذيرية</li>
+                    <li>اليوم 7: تطبيق عملي على شركات حقيقية</li>
+                </ol>
+                
+                <div class="quote-box">
+                    <p>"الأرقام لا تكذب، لكن الكذابين يستطيعون تزوير الأرقام" - تشارلز غروسباور</p>
+                </div>
+            </section>
+        </div>
+        
+        <div class="article-tags">
+            <span><i class="fas fa-tags"></i> الوسوم:</span>
+            <a href="#">البيانات المالية</a>,
+            <a href="#">التحليل المالي</a>,
+            <a href="#">القوائم المالية</a>,
+            <a href="#">النسب المالية</a>,
+            <a href="#">قرارات استثمارية</a>
+        </div>
+        
+        <div class="article-share">
+            <h3>شارك المقال:</h3>
+            <div class="share-buttons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> فيسبوك</a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i> تويتر</a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i> لينكدإن</a>
+                <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i> واتساب</a>
+            </div>
+        </div>
+    </article>
+</main>
+<!-- قسم الأسئلة الشائعة الجديدة -->
+<section class="faq-section">
+    <h2><i class="fas fa-question-circle"></i> أسئلة شائعة عن قراءة البيانات المالية</h2>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <h3>ما هي أهم القوائم المالية التي يجب فهمها؟</h3>
+            <p>أهم ثلاث قوائم مالية هي: قائمة الدخل (تظهر الربح والخسارة)، الميزانية العمومية (تظهر الأصول والخصوم وحقوق الملكية)، وقائمة التدفقات النقدية (تظهر حركة النقدية). فهم هذه القوائم الثلاث يعطيك صورة شاملة عن صحة الشركة المالية.</p>
+        </div>
+        <div class="faq-item">
+            <h3>كم من الوقت أحتاج لتعلم قراءة البيانات المالية؟</h3>
+            <p>يمكنك تعلم الأساسيات في أسبوع كما في هذا الدليل، لكن إتقان التحليل المالي المتقدم يحتاج إلى ممارسة مستمرة. الخبراء يقترحون دراسة 3-4 ساعات يوميًا لمدة شهر للحصول على فهم متين.</p>
+        </div>
+        <div class="faq-item">
+            <h3>ما هي أكثر الأخطاء شيوعًا عند قراءة البيانات المالية؟</h3>
+            <p>أبرزها: التركيز على رقم واحد دون النظر للسياق، إهمال قراءة الحواشي، عدم المقارنة مع فترات سابقة أو مع منافسين، والاعتماد فقط على الأرباح دون النظر للتدفقات النقدية.</p>
+        </div>
+        <div class="faq-item">
+            <h3>هل يمكن الاعتماد فقط على النسب المالية؟</h3>
+            <p>لا، النسب المالية أداة مفيدة لكنها لا تكفي وحدها. يجب دعمها بتحليل نوعي لفهم السياق، وقراءة الحواشي، وتحليل الاتجاهات التاريخية، وفهم ظروف الصناعة والاقتصاد الكلي.</p>
+        </div>
+        <div class="faq-item">
+            <h3>ما الفرق بين الربح والتدفق النقدي؟</h3>
+            <p>الربح هو الفرق بين الإيرادات والمصروفات وفقًا لمبادئ المحاسبة، بينما التدفق النقدي هو حركة النقود الفعلية. شركة قد تكون مربحة ولكن تعاني من مشاكل نقدية إذا كان زبائنها يتأخرون في السداد مثلاً.</p>
+        </div>
+        <div class="faq-item">
+            <h3>كيف أعرف إذا كانت الشركة تخفي مشاكل مالية؟</h3>
+            <p>ابحث عن: تغييرات مفاجئة في السياسات المحاسبية، تناقضات بين الأرباح والتدفقات النقدية، زيادة غير مبررة في الذمم المدينة أو المخزون، التزامات غير ظاهرة في الميزانية، وتكرار تعديل الأرباح المعلنة سابقًا.</p>
+        </div>
+    </div>
+</section>
+
+<!-- قسم المقالات ذات الصلة -->
+<section class="related-articles">
+    <h2><i class="fas fa-book-reader"></i> مقالات ذات صلة</h2>
+    <div class="articles-grid">
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="التحليل المالي">
+            <div class="article-content">
+                <h3>دليل المبتدئين للتحليل المالي الأساسي</h3>
+                <p>كيف تقيم الشركات باستخدام الأدوات المالية البسيطة</p>
+                <a href="#" class="read-more">اقرأ المزيد</a>
+            </div>
+        </div>
+        <div class="article-card">
+            <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="الاستثمار">
+            <div class="article-content">
+                <h3>كيف تختار الأسهم المناسبة للاستثمار؟</h3>
+                <p>أساسيات تحليل الشركات قبل الاستثمار في أسهمها</p>
+                <a href="#" class="read-more">اقرأ المزيد</a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+    <div class="footer-content">
+      
+            <!-- قسم "عن الموسوعة" مع بيانات منظمة (Schema) -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                <h3>عن الموسوعة</h3>
+                <p itemprop="description">موسوعة التوثيق توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث.</p>
+                <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                <meta itemprop="name" content="موسوعة التوثيق">
+            </div>
+
+            <!-- قسم الروابط مع روابط داخلية مُحسّنة -->
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                    <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                    <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                    <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                    <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- قسم النشرة البريدية مع إمكانية الوصول -->
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك ليصلك جديد الموسوعة</p>
+                <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                    <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                </form>
+            </div>
+
+            <!-- قسم وسائل التواصل مع بيانات منظمة -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- حقوق النشر مع بيانات تاريخية -->
+        <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+            <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+            <span itemprop="copyrightHolder">موسوعة التوثيق</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+<script>
+  let lastScrollTop = 0;
+
+  const nav = document.querySelector("nav");
+  const searchBox = document.querySelector(".search-box");
+
+  window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+      nav.style.transform = "translateY(-100%)";
+      if (searchBox) searchBox.style.top = "0";
+    } else {
+      // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+      nav.style.transform = "translateY(0)";
+      if (searchBox) searchBox.style.top = "100%";
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+</body>
+</html>

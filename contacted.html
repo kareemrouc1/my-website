@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta name="description" content="صفحة اتصل بنا - تواصل مع فريق تطوير موسوعة التوثيق والمؤسس كريم أبو روق">
+    <meta name="keywords" content="اتصل بنا, تواصل, موسوعة التوثيق, فريق التطوير, كريم أبو روق">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="اتصل بنا - فريق موسوعة التوثيق" />
+    <meta property="og:description" content="تواصل مع فريق تطوير موسوعة التوثيق والمؤسس كريم أبو روق" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-altwsek.netlify.app/contacted" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>اتصل بنا - فريق موسوعة التوثيق</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> موسوعة التوثيق</h1>
+            <p>إجابات موثقة للأسئلة الأكثر بحثاً على جوجل</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+                <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+                <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+                <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+                <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+            </ul>
+            
+            <div class="search-box">
+                <form onsubmit="handleSearch(event)" role="search">
+                    <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                    <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="contact-page">
+            <h1>تواصل مع فريق موسوعة التوثيق</h1>
+            
+            <div class="contact-intro">
+                <p>نرحب بأسئلتكم واستفساراتكم حول موسوعة التوثيق ومحتواها. فريقنا متاح للرد على استفساراتكم خلال 24-48 ساعة.</p>
+            </div>
+            
+            <div class="contact-grid">
+                  <section class="contact-form">
+    <h2><i class="fas fa-envelope"></i> أرسل رسالة</h2>
+    <form id="contactForm" action="https://formspree.io/f/xovwpnag" method="POST" aria-label="نموذج التواصل">
+        <div class="form-group">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        
+        <div class="form-group">
+            <label for="subject">موضوع الرسالة:</label>
+            <select id="subject" name="subject" required aria-required="true">
+                <option value="">اختر موضوع الرسالة</option>
+                <option value="general">استفسار عام</option>
+                <option value="content">اقتراح أو تصحيح محتوى</option>
+                <option value="technical">مشكلة فنية</option>
+                <option value="collaboration">فرص تعاون</option>
+                <option value="advertising">الإعلان على الموقع</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">نص الرسالة:</label>
+            <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
+    </form>
+</section>
+                
+                <section class="contact-info">
+                    <h2><i class="fas fa-info-circle"></i> معلومات التواصل</h2>
+                    
+                    <div class="team-section">
+                        <h3>فريق التطوير</h3>
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>كريم أبو روق</h4>
+                                <p class="role">المؤسس والمالك</p>
+                                <p class="bio">مطور ويب وخبير في تحسين محركات البحث، أسس موسوعة التوثيق لتقديم محتوى عربي موثوق على الإنترنت.</p>
+                                <p class="email"><i class="fas fa-envelope"></i> <a href="mailto:kareemrouc99@gmail.com">kareemrouc99@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
+                            <div class="member-info">
+                                <h4>فريق المحتوى</h4>
+                                <p class="role">كتاب ومحررون</p>
+                                <p class="bio">فريق من الكتاب المتخصصين في مختلف المجالات يعملون على توفير محتوى دقيق وموثوق.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h3>طرق التواصل الأخرى</h3>
+                        <ul>
+                            <li><i class="fas fa-envelope-open-text"></i> البريد الإلكتروني: <a href="mailto:info@mawsoat-altwsek.com">info@mawsoat-altwsek.com</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i> العنوان: القاهرة، مصر</li>
+                            <li><i class="fas fa-clock"></i> أوقات العمل: الأحد - الخميس، 9 ص - 5 م</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <section class="faq-contact">
+                <h2><i class="fas fa-question-circle"></i> أسئلة شائعة</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>كم تستغرق وقت الرد على الرسائل؟</h3>
+                        <p>نهدف للرد على جميع الاستفسارات خلال 24-48 ساعة من استلامها، باستثناء أيام العطل الرسمية.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>هل تقبلون مساهمات من كتاب خارجيين؟</h3>
+                        <p>نعم، نرحب بمساهمات الكتاب المحترفين في مختلف المجالات. يرجى إرسال عينات من أعمالك السابقة عبر نموذج التواصل.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>كيف يمكنني الإبلاغ عن خطأ في المحتوى؟</h3>
+                        <p>يمكنك استخدام نموذج التواصل واختيار "اقتراح أو تصحيح محتوى" كموضوع الرسالة، مع ذكر رابط المقالة وتفاصيل التصحيح المطلوب.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                    <h3>عن الموسوعة</h3>
+                    <p itemprop="description">موسوعة التوثيق توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً على محركات البحث.</p>
+                    <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                    <meta itemprop="name" content="موسوعة التوثيق">
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                        <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                        <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                        <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                        <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>النشرة البريدية</h3>
+                    <p>اشترك ليصلك جديد الموسوعة</p>
+                    <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                        <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                        <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                    </form>
+                </div>
+
+                <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                        <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+                <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+                <span itemprop="copyrightHolder">موسوعة التوثيق</span>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // تحديث سنة حقوق النشر تلقائياً
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // معالجة إرسال نموذج التواصل
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لتواصلكم! تم استلام رسالتك وسيتم الرد في أقرب وقت ممكن.');
+            this.reset();
+        });
+        
+        // معالجة البحث (كما في الصفحة الأصلية)
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchParam = urlParams.get('q');
+        if(searchParam) {
+            document.getElementById('searchQuery').value = searchParam;
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchQuery').value.trim();
+            
+            if(query) {
+                window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            } else {
+                alert('الرجاء إدخال كلمة بحث');
+            }
+        }
+        
+        // تأثير التمرير لإخفاء/إظهار شريط التنقل
+        let lastScrollTop = 0;
+        const nav = document.querySelector("nav");
+        const searchBox = document.querySelector(".search-box");
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                nav.style.transform = "translateY(-100%)";
+                if (searchBox) searchBox.style.top = "0";
+            } else {
+                nav.style.transform = "translateY(0)";
+                if (searchBox) searchBox.style.top = "100%";
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>

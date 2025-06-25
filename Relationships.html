@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- تحسينات SEO -->
+    <meta name="description" content="أسرار الحب والعلاقات: دليل عملي لجعل الفتاة تحبك وتنجذب إليك بناءً على علم النفس ونصائح الخبراء">
+    <meta name="keywords" content="حب، علاقات، جذب، كيف تجعل فتاة تحبك، أسرار الحب، نصائح علاقات، علم النفس العاطفي">
+    <meta name="author" content="Kareem Rouc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="كيف تجعل فتاة تحبك؟ - دليل علم النفس العملي" />
+    <meta property="og:description" content="أسرار الجذب العاطفي ونصائح الخبراء لبناء علاقة ناجحة">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mawsoat-almwal.netlify.app/Relationships" />
+    <meta property="og:locale" content="ar_AR" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <title>أسرار الحب والعلاقات - كيف تجعل فتاة تحبك بناءً على علم النفس</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heart"></i> أسرار الحب والعلاقات</h1>
+            <p>دليل عملي لعلاقات ناجحة بناءً على علم النفس ونصائح الخبراء</p>
+        </div>
+    </header>
+
+   <nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+            <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+            <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+            <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+            <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+        </ul>
+        
+        <div class="search-box">
+            <form onsubmit="handleSearch(event)" role="search">
+                <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+// اس.تخراج كلمة البحث من URL إن وجدت (للعودة للبحث السابق)
+const urlParams = new URLSearchParams(window.location.search);
+const searchParam = urlParams.get('q');
+if(searchParam) {
+    document.getElementById('searchQuery').value = searchParam;
+}
+
+function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('searchQuery').value.trim();
+    
+    if(query) {
+        // توجيه إلى صفحة البحث مع الاحتفاظ بكلمة البحث
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    } else {
+        alert('الرجاء إدخال كلمة بحث');
+    }
+}
+</script>
+
+    <main class="container">
+        <section class="featured-articles">
+            <h2><i class="fas fa-star"></i> أحدث مقالات العلاقات والحب</h2>
+            <div class="articles-grid">
+                
+              <!-- مقالة 1 -->
+
+
+<!-- مقالة 2 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="علامات الحب عند المرأة">
+    <div class="article-content">
+        <h3>15 علامة تخبرك أنها معجبة بك دون أن تتكلم</h3>
+        <p>كيف تعرف إذا كانت الفتاة تحبك من خلال لغة الجسد والإشارات الخفية</p>
+        <a href="signs-she-likes-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 3 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كلمات تجعل الفتاة تحبك">
+    <div class="article-content">
+        <h3>أقوى 20 كلمة تجعل أي فتاة تقع في حبك</h3>
+        <p>تعلم فن الكلام الجذاب والعبارات التي تثير مشاعرها وتجعلها تفكر فيك</p>
+        <a href="words-to-make-her-love-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 4 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجذب الفتاة">
+    <div class="article-content">
+        <h3>7 قوانين نفسية لجذب أي فتاة تريدها</h3>
+        <p>أسرار الجذب العاطفي التي يستخدمها خبراء العلاقات لجعل المرأة تشعر بالانجذاب</p>
+        <a href="psychological-laws-of-attraction.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 5 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="أخطاء تبعد الفتاة عنك">
+    <div class="article-content">
+        <h3>10 أخطاء فادحة تبعد الفتاة عنك دون أن تدري</h3>
+        <p>الأشياء التي تقتل الانجذاب وتجعل الفتاة تفقد اهتمامها بك وكيف تتجنبها</p>
+        <a href="mistakes-that-push-her-away.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 6 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تعبر عن حبك">
+    <div class="article-content">
+        <h3>كيف تعبر عن حبك بطريقة تجعلها تتعلق بك أكثر؟</h3>
+        <p>أساليب ذكية للتعبير عن المشاعر تعزز العلاقة وتجعلها تدمن حبك</p>
+        <a href="how-to-express-love.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+
+
+<!-- مقالة 8 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تعرف أنها تحبك">
+    <div class="article-content">
+        <h3>كيف تعرف إذا كانت الفتاة تحبك سراً؟ 18 علامة واضحة</h3>
+        <p>إشارات خفية تكشف مشاعرها الحقيقية حتى لو حاولت إخفاءها</p>
+        <a href="signs-she-secretly-loves-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 9 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تثق بك">
+    <div class="article-content">
+        <h3>كيف تبني الثقة مع الفتاة التي تحبها؟ دليل عملي</h3>
+        <p>خطوات لخلق علاقة قوية مبنية على الصدق والاحترام المتبادل</p>
+        <a href="how-to-build-trust-with-her.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 10 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تتكلم مع الفتاة">
+    <div class="article-content">
+        <h3>فن الحوار مع الفتاة: كيف تتحدث بطريقة تجذبها؟</h3>
+        <p>أساليب المحادثة التي تجعلها تستمتع بكل كلمة تقولها</p>
+        <a href="how-to-talk-to-girls.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 11 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تشتاق إليك">
+    <div class="article-content">
+        <h3>كيف تجعل الفتاة تشتاق إليك عندما تكون بعيداً؟</h3>
+        <p>تقنيات نفسية لخلق الشوق والرغبة في العودة إليك</p>
+        <a href="how-to-make-her-miss-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+
+
+<!-- مقالة 13 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تكسب قلب الفتاة">
+    <div class="article-content">
+        <h3>كيف تكسب قلب الفتاة التي تحبها؟ 7 قواعد ذهبية</h3>
+        <p>مفاتيح الوصول إلى قلبها وجعلها تبادلك المشاعر بصدق</p>
+        <a href="how-to-win-her-heart.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 14 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تعرف أنها الشخص المناسب">
+    <div class="article-content">
+        <h3>كيف تعرف أنها الفتاة المناسبة لك؟ 10 معايير مهمة</h3>
+        <p>علامات تدل على أن هذه العلاقة تستحق الاستثمار فيها</p>
+        <a href="how-to-know-shes-the-one.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 15 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعل علاقتك تدوم">
+    <div class="article-content">
+        <h3>كيف تبني علاقة حب تدوم؟ أسرار السعادة الزوجية</h3>
+        <p>مبادئ العلاقات الناجحة التي تحافظ على الحب لسنوات طويلة</p>
+        <a href="how-to-make-love-last.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 16 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589091380-5d60150f1225?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تقع في حبك">
+    <div class="article-content">
+        <h3>كيف تجعل الفتاة تقع في حبك بسرعة؟ 5 خطوات سحرية</h3>
+        <p>استراتيجيات فعالة لخلق مشاعر قوية في وقت قصير</p>
+        <a href="how-to-make-her-fall-in-love-fast.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 17 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تتغلب على الخجل">
+    <div class="article-content">
+        <h3>كيف تتغلب على الخجل مع الفتاة التي تحبها؟</h3>
+        <p>تمارين عملية لزيادة الثقة بالنفس والتخلص من التوتر</p>
+        <a href="how-to-overcome-shyness.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 18 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تعرف أنها تريدك">
+    <div class="article-content">
+        <h3>كيف تعرف إذا كانت الفتاة تريدك أن تبدأ معها؟</h3>
+        <p>إشارات واضحة تخبرك أنها مستعدة لتطوير العلاقة</p>
+        <a href="how-to-know-she-wants-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 19 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تحترمك">
+    <div class="article-content">
+        <h3>كيف تجعل الفتاة تحترمك وتقدرك؟ 8 قواعد أساسية</h3>
+        <p>أساليب لبناء مكانة قوية في عينها دون أن تفقد حبها</p>
+        <a href="how-to-make-her-respect-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 20 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589091380-5d60150f1225?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تظهر لها حبك">
+    <div class="article-content">
+        <h3>كيف تظهر للفتاة حبك دون أن تبدو ضعيفاً؟</h3>
+        <p>فن التعبير عن المشاعر مع الحفاظ على قيمتك وجاذبيتك</p>
+        <a href="how-to-show-love.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 21 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تبادلك الحب">
+    <div class="article-content">
+        <h3>كيف تجعل الفتاة تبادلك نفس المشاعر القوية؟</h3>
+        <p>طرق لخلق توازن عاطفي في العلاقة وجعلها تستثمر فيك كما تستثمر فيها</p>
+        <a href="how-to-make-her-love-you-back.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 22 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تتوقف عن التفكير فيها">
+    <div class="article-content">
+        <h3>كيف تتوقف عن التفكير في الفتاة التي لا تهتم بك؟</h3>
+        <p>تمارين نفسية للتخلص من التعلق العاطفي غير المتبادل</p>
+        <a href="how-to-stop-thinking-about-her.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 23 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تعرف أنها تحبك">
+    <div class="article-content">
+        <h3>كيف تعرف إذا كانت الفتاة تحبك حقاً أم أنها تمثل؟</h3>
+        <p>علامات حب حقيقي تميزه عن الإعجاب المؤقت أو الاهتمام السطحي</p>
+        <a href="how-to-know-if-she-really-loves-you.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 24 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1516589091380-5d60150f1225?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تجعلها تغار">
+    <div class="article-content">
+        <h3>كيف تجعل الفتاة تغار منك بطريقة صحية؟</h3>
+        <p>أساليب ذكية لزيادة اهتمامها بك دون إيذاء مشاعرها</p>
+        <a href="how-to-make-her-jealous.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+
+<!-- مقالة 25 -->
+<div class="article-card">
+    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="كيف تتقبل الرفض">
+    <div class="article-content">
+        <h3>كيف تتعامل مع الرفض العاطفي وتتجاوزه بسرعة؟</h3>
+        <p>خطوات عملية للتعافي من خيبة الأمل والعودة أقوى من قبل</p>
+        <a href="how-to-deal-with-rejection.html" class="read-more">اقرأ المزيد</a>
+    </div>
+</div>
+                   </div>
+        </section>
+
+        </section>
+    </main>
+
+     <footer>
+    <div class="container">
+        <div class="footer-content">
+            <!-- قسم "عن الموسوعة" مع بيانات منظمة (Schema) -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/Organization">
+                <h3>عن الموسوعة</h3>
+                <p itemprop="description">موسوعة العلاقات توفر إجابات موثقة وعلمية للأسئلة الأكثر شيوعاً في عالم الحب والعلاقات.</p>
+                <p>نهدف إلى تقديم معلومات دقيقة من مصادر موثوقة في مختلف المجالات.</p>
+                <meta itemprop="name" content="موسوعة العلاقات">
+            </div>
+
+            <!-- قسم الروابط مع روابط داخلية مُحسّنة -->
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="question.html" title="الأسئلة المتكررة حول الموسوعة" itemprop="significantLink">الأسئلة الشائعة</a></li>
+                    <li><a href="contacted.html" title="طرق التواصل مع فريق الموسوعة" itemprop="significantLink">اتصل بنا</a></li>
+                    <li><a href="policy.html" title="نقاط سياسة الخصوصية المهمة" itemprop="significantLink">سياسة الخصوصية</a></li>
+                    <li><a href="conditions.html" title="الشروط الكاملة لاستخدام الموقع" itemprop="significantLink">شروط الاستخدام</a></li>
+                    <li><a href="help.html" title="كيف تدعم الموسوعة؟" itemprop="significantLink">المساهمة معنا</a></li>
+                </ul>
+            </div>
+
+            <!-- قسم النشرة البريدية مع إمكانية الوصول -->
+            <div class="footer-section">
+                <h3>النشرة البريدية</h3>
+                <p>اشترك ليصلك جديد الموسوعة</p>
+                <form class="newsletter-form" aria-label="نشرة الموسوعة البريدية">
+                    <input type="email" placeholder="بريدك الإلكتروني" aria-label="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" aria-label="إرسال الاشتراك">اشتراك</button>
+                </form>
+            </div>
+
+            <!-- قسم وسائل التواصل مع بيانات منظمة -->
+            <div class="footer-section" itemscope itemtype="https://schema.org/SocialMediaPosting">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="صفحتنا على فيسبوك" itemprop="sharedContent"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على تويتر" itemprop="sharedContent"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="حسابنا على إنستغرام" itemprop="sharedContent"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على يوتيوب" itemprop="sharedContent"><i class="fab fa-youtube"></i></a>
+                    <a href="#" onclick="alert('قريباً'); return false;" aria-label="قناتنا على تلغرام" itemprop="sharedContent"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- حقوق النشر مع بيانات تاريخية -->
+        <div class="copyright" itemprop="copyrightYear" itemscope itemtype="https://schema.org/CreativeWork">
+            <p>&copy; <span id="current-year" itemprop="datePublished">2025</span> 
+            <span itemprop="copyrightHolder">موسوعة العلاقات</span>. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+      let lastScrollTop = 0;
+
+      const nav = document.querySelector("nav");
+      const searchBox = document.querySelector(".search-box");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // تمرير لأسفل → إخفاء الشريط العلوي ورفع search-box
+          nav.style.transform = "translateY(-100%)";
+          if (searchBox) searchBox.style.top = "0";
+        } else {
+          // تمرير لأعلى → إظهار الشريط العلوي وإنزال search-box
+          nav.style.transform = "translateY(0)";
+          if (searchBox) searchBox.style.top = "100%";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+    </script>
+</body>
+</html>
