@@ -45,4 +45,34 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- المواضيع الجديدة -->
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic1.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic2.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic3.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic4.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic5.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topic6.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mawsoat-altwsek.netlify.app/topics.html</loc>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
