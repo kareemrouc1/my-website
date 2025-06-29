@@ -18,41 +18,107 @@
     <title>موسوعة التوثيق - أسئلة وأجوبة شائمة</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* إضافة أنماط CSS للزر الجديد في الـ Header */
+   <style>
+    /* أنماط محسنة للزر في الهيدر مع تأثيرات متقدمة واستجابة أفضل */
+    .header-actions {
+        position: absolute;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    
+    .account-btn {
+        background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05), 
+                    inset 0 1px 0 rgba(255,255,255,0.1);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .account-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        transition: all 0.6s ease;
+    }
+    
+    .account-btn:hover {
+        background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1), 
+                    inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    
+    .account-btn:hover::before {
+        left: 100%;
+    }
+    
+    .account-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .account-btn i {
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .account-btn:hover i {
+        transform: scale(1.1);
+    }
+    
+    /* تحسينات للاستجابة على الأجهزة المحمولة */
+    @media (max-width: 768px) {
         .header-actions {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            position: static;
+            transform: none;
+            margin-top: 0.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            padding: 0 1rem;
         }
         
         .account-btn {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
+            width: 100%;
+            max-width: 200px;
+            padding: 0.65rem 1.25rem;
+            font-size: 0.9rem;
+        }
+    }
+    
+    /* تحسينات للوضع الداكن (إذا كان الموقع يدعمه) */
+    @media (prefers-color-scheme: dark) {
+        .account-btn {
+            background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%);
+            border-color: rgba(255,255,255,0.05);
         }
         
         .account-btn:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 100%);
         }
-        
-        @media (max-width: 768px) {
-            .header-actions {
-                position: static;
-                transform: none;
-                margin-top: 10px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
