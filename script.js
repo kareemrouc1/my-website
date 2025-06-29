@@ -31,104 +31,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // تغيير لون شريط التنقل عند التمرير
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            nav.style.backgroundColor = 'rgba(45, 52, 54, 0.97)';
-            nav.style.backdropFilter = 'blur(5px)';
-            nav.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.2)';
-        } else {
-            nav.style.backgroundColor = '#2d3436';
-            nav.style.backdropFilter = 'none';
-            nav.style.boxShadow = 'none';
-        }
-        
-        // إظهار/إخفاء زر العودة للأعلى
-        const scrollTopBtn = document.querySelector('.scroll-top');
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('active');
-        } else {
-            scrollTopBtn.classList.remove('active');
-        }
-    });
-
-   
-
-    // تحميل المزيد من الأسئلة عند التمرير للأسفل
-    let isLoading = false;
-    window.addEventListener('scroll', function() {
-        if (isLoading) return;
-        
-        const scrollPosition = window.innerHeight + window.scrollY;
-        const pageHeight = document.body.offsetHeight - 300;
-        
-        if (scrollPosition >= pageHeight) {
-            loadMoreQuestions();
-        }
-    });
-
-    function loadMoreQuestions() {
-        isLoading = true;
-        const loader = document.createElement('div');
-        loader.className = 'questions-loader';
-        loader.innerHTML = `
-            <div class="loading-content">
-                <i class="fas fa-spinner fa-spin"></i>
-                <span>جاري تحميل المزيد من الأسئلة...</span>
-            </div>
-        `;
-        document.querySelector('.questions-grid').after(loader);
-        
-        // محاكاة طلب AJAX (في التطبيق الحقيقي سيتم استبدالها بطلب فعلي)
-        setTimeout(() => {
-            const newQuestions = [
-                {
-                    title: 'كيف تتخلص من التوتر قبل الامتحانات؟',
-                    desc: 'نصائح علمية لتقليل القلق وتحسين الأداء في الامتحانات',
-                    img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-                    category: 'تعليم'
-                },
-                {
-                    title: 'ما هي أفضل التطبيقات لإدارة الوقت؟',
-                    desc: 'قائمة بأفضل أدوات تنظيم الوقت لزيادة الإنتاجية',
-                    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-                    category: 'تكنولوجيا'
-                }
-            ];
-            
-            newQuestions.forEach(question => {
-                const questionCard = document.createElement('div');
-                questionCard.className = 'question-card';
-                questionCard.innerHTML = `
-                    <img src="${question.img}" alt="${question.category}">
-                    <div class="question-content">
-                        <h3>${question.title}</h3>
-                        <p>${question.desc}</p>
-                        <a href="article.html" class="read-more">اقرأ المزيد</a>
-                    </div>
-                `;
-                document.querySelector('.questions-grid').appendChild(questionCard);
-            });
-            
-            loader.remove();
-            isLoading = false;
-            showToast('تم تحميل المزيد من الأسئلة بنجاح', 'success');
-            
-            // إضافة تأثير للأسئلة الجديدة
-            const newCards = document.querySelectorAll('.question-card');
-            newCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.transition = 'all 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
-        }, 2000);
+     // تغيير لون شريط التنقل عند التمرير
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        nav.style.backgroundColor = 'rgba(45, 52, 54, 0.85)'; // زيادة الشفافية هنا (0.85 بدلاً من 0.97)
+        nav.style.backdropFilter = 'blur(5px)';
+        nav.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.2)';
+    } else {
+        nav.style.backgroundColor = '#2d3436';
+        nav.style.backdropFilter = 'none';
+        nav.style.boxShadow = 'none';
     }
-
+    
+    // إظهار/إخفاء زر العودة للأعلى
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('active');
+    } else {
+        scrollTopBtn.classList.remove('active');
+    }
+});
     // زر العودة للأعلى
     const scrollTopBtn = document.createElement('div');
     scrollTopBtn.className = 'scroll-top';
@@ -159,6 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // تفعيل وظائف الصفحة الداخلية إذا كانت موجودة
     if (document.querySelector('.article-container')) {
         initArticlePage();
+    }
+
+    // ضبط التخطيط عند التحميل وعند تغيير الحجم
+    window.addEventListener('load', adjustLayout);
+    window.addEventListener('resize', adjustLayout);
+
+    // تسجيل Service Worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
     }
 });
 
@@ -197,13 +129,7 @@ function initArticlePage() {
                            this.classList.contains('fa-twitter') ? 'Twitter' :
                            this.classList.contains('fa-whatsapp') ? 'WhatsApp' : 'Telegram';
             
-            // محاكاة المشاركة (في التطبيق الحقيقي سيتم استخدام واجهات برمجة التطبيقات الخاصة بكل منصة)
             showToast(`سيتم مشاركة المقال على ${platform}`, 'info');
-            
-            // مثال لمشاركة حقيقية على فيسبوك:
-            // if (platform === 'Facebook') {
-            //     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
-            // }
         });
     });
 
@@ -225,7 +151,6 @@ function initArticlePage() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
             submitBtn.disabled = true;
             
-            // محاكاة إرسال البيانات (في التطبيق الحقيقي سيتم استبدالها بطلب AJAX)
             setTimeout(() => {
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الاشتراك!';
                 showToast(`شكراً على اشتراكك! سيصلك جديدنا على ${email}`, 'success');
@@ -244,33 +169,24 @@ function initArticlePage() {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
-
-    // إضافة أزرار التنسيق للمحتوى (للوحة التحكم إذا وجدت)
-    if (document.querySelector('.editor-toolbar')) {
-        initEditor();
-    }
 }
 
-// وظيفة محرر النصوص (للوحة التحكم)
-function initEditor() {
-    const buttons = document.querySelectorAll('.editor-toolbar button');
+// ضبط التخطيط العام للصفحة
+function adjustLayout() {
+    // ضبط حجم الصور
+    const images = document.querySelectorAll('.featured-image img');
+    images.forEach(img => {
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+    });
     
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const command = this.getAttribute('data-command');
-            
-            if (command === 'h1' || command === 'h2' || command === 'h3') {
-                document.execCommand('formatBlock', false, command);
-            } else if (command === 'image') {
-                const url = prompt('أدخل رابط الصورة:');
-                if (url) document.execCommand('insertImage', false, url);
-            } else {
-                document.execCommand(command, false, null);
-            }
-            
-            this.classList.toggle('active');
-            setTimeout(() => this.classList.toggle('active'), 200);
-        });
+    // تحسين وضوح النص
+    const cards = document.querySelectorAll('.question-card');
+    cards.forEach(card => {
+        const content = card.querySelector('.question-content');
+        if (content) {
+            content.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+        }
     });
 }
 
@@ -311,76 +227,5 @@ dynamicStyles.textContent = `
     .toast.info {
         background-color: #0984e3;
     }
-    
-    .questions-loader {
-        text-align: center;
-        padding: 20px;
-        color: #636e72;
-    }
-    
-    .questions-loader .loading-content {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .questions-loader i {
-        font-size: 1.2rem;
-    }
 `;
 document.head.appendChild(dynamicStyles);
-// أضف هذا في نهاية الملف الأصلي
-function adjustLayout() {
-    // ضبط حجم الصور
-    const images = document.querySelectorAll('.featured-image img');
-    images.forEach(img => {
-        img.style.maxWidth = '100%';
-        img.style.height = 'auto';
-    });
-    
-    // تحسين وضوح النص
-    const cards = document.querySelectorAll('.question-card');
-    cards.forEach(card => {
-        const content = card.querySelector('.question-content');
-        if (content) {
-            content.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-        }
-    });
-}
-
-// استدعاء الدالة عند التحميل وعند تغيير حجم النافذة
-window.addEventListener('load', adjustLayout);
-window.addEventListener('resize', adjustLayout);
-// أضف في ملف JavaScript
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js');
-  });
-}
-// معالجة إرسال نموذج التواصل
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const formData = new FormData(form);
-    
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            alert('شكراً لتواصلكم! تم استلام رسالتك وسيتم الرد في أقرب وقت ممكن.');
-            form.reset();
-        } else {
-            throw new Error('فشل في إرسال النموذج');
-        }
-    } catch (error) {
-        alert('حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى لاحقاً.');
-        console.error('Error:', error);
-    }
-});
