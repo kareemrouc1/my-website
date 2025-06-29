@@ -15,38 +15,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="موسوعة شاملة للأسئلة والأجوبة في مختلف المجالات مثل الصحة، العلاقات، المال والأعمال، التعليم والتكنولوجيا">
-    <title>موسوعة التوثيق - أسئلة وأجوبة شاملة</title>
+    <title>موسوعة التوثيق - أسئلة وأجوبة شائمة</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* إضافة أنماط CSS للزر الجديد في الـ Header */
+        .header-actions {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .account-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .account-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .header-actions {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
+            
             <h1><i class="fas fa-book"></i> موسوعة التوثيق</h1>
             <p>إجابات موثقة للأسئلة الأكثر بحثاً على جوجل</p>
         </div>
+     <div class="container">
+            <!-- زر حسابي المضاف في الـ Header -->
+            <div class="header-actions">
+                <a href="login.html" class="account-btn" title="تسجيل الدخول أو إنشاء حساب">
+                    <i class="fas fa-user"></i>
+                    <span>حسابي</span>
+                </a>
+            </div>
     </header>
 
-<nav>
-    <div class="container">
-        <ul>
-            <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
-            <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
-            <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
-            <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
-            <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
-            <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
-        </ul>
-        
-        <div class="search-box">
-            <form onsubmit="handleSearch(event)" role="search">
-                <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
-                <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
-            </form>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" title="الصفحة الرئيسية"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="Relationships.html" title="نصائح وتوجيهات في العلاقات"><i class="fas fa-heart"></i> علاقات</a></li>
+                <li><a href="health.html" title="نصائح صحية وطبية"><i class="fas fa-flask"></i> صحة</a></li>
+                <li><a href="Money.html" title="أخبار المال والأعمال"><i class="fas fa-money-bill-wave"></i> مال وأعمال</a></li>
+                <li><a href="education.html" title="مواد تعليمية ودروس"><i class="fas fa-graduation-cap"></i> تعليم</a></li>
+                <li><a href="technology.html" title="أحدث أخبار التكنولوجيا"><i class="fas fa-laptop-code"></i> تكنولوجيا</a></li>
+            </ul>
+            
+            <div class="search-box">
+                <form onsubmit="handleSearch(event)" role="search">
+                    <input type="text" id="searchQuery" placeholder="ابحث عن سؤال..." aria-label="بحث عن محتوى" value="">
+                    <button type="submit" aria-label="تنفيذ البحث"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
+    <!-- باقي المحتوى يبقى كما هو -->
 <script>
 // استخراج كلمة ا.لبحث من URL إن وجدت (للعودة للبحث السابق)
 const urlParams = new URLSearchParams(window.location.search);

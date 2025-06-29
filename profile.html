@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - موسوعة التوثيق</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --text-color: #2b2d42;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --error-color: #ef233c;
+            --success-color: #4cc9f0;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+            padding: 40px 0;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .profile-header {
+            margin-bottom: 30px;
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .profile-email {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .profile-details {
+            background: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-top: 30px;
+            text-align: right;
+        }
+        
+        .detail-item {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .detail-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .detail-value {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .logout-btn {
+            display: inline-block;
+            background: var(--error-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background: #d32f2f;
+            box-shadow: 0 5px 15px rgba(239, 35, 60, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-card {
+                padding: 30px 20px;
+            }
+            
+            .profile-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+            
+            .profile-name {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-user-circle"></i> الملف الشخصي</h1>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar" id="user-avatar">U</div>
+                <h2 class="profile-name" id="user-name">مستخدم</h2>
+                <p class="profile-email" id="user-email">user@example.com</p>
+            </div>
+            
+            <div class="profile-details">
+                <div class="detail-item">
+                    <span class="detail-label">معرّف المستخدم:</span>
+                    <span class="detail-value" id="user-id">12345</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">حالة الحساب:</span>
+                    <span class="detail-value" id="user-status">مفعل</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">تاريخ التسجيل:</span>
+                    <span class="detail-value" id="signup-date">١ يناير ٢٠٢٣</span>
+                </div>
+            </div>
+            
+            <button class="logout-btn" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // تهيئة Supabase
+        const supabaseUrl = 'https://plzucidawtyklbldyfyt.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsenVjaWRhd3R5a2xibGR5Znl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTExMzg4MzIsImV4cCI6MjA2NjcxNDgzMn0.yyX4YVHN3ucsOHPmGV6YzganJKMu985otLIeJhUvLEc';
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+        
+        // عناصر DOM
+        const userAvatar = document.getElementById('user-avatar');
+        const userName = document.getElementById('user-name');
+        const userEmail = document.getElementById('user-email');
+        const userId = document.getElementById('user-id');
+        const userStatus = document.getElementById('user-status');
+        const signupDate = document.getElementById('signup-date');
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        // عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', async function() {
+            // التحقق من حالة المصادقة
+            const { data: { user }, error } = await supabase.auth.getUser();
+            
+            if (!user) {
+                // إذا لم يكن المستخدم مسجل الدخول، نعيده إلى صفحة تسجيل الدخول
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // تحميل بيانات المستخدم
+            loadUserData(user);
+        });
+        
+        // تحميل بيانات المستخدم
+        function loadUserData(user) {
+            // الحصول على البيانات المحفوظة
+            const savedUser = JSON.parse(localStorage.getItem('auth_user')) || {};
+            
+            // عرض بيانات المستخدم
+            const displayName = user.user_metadata?.full_name || savedUser.name || 'مستخدم';
+            const displayEmail = user.email || savedUser.email || 'بريد إلكتروني غير معروف';
+            
+            // عرض الحرف الأول من الاسم في الصورة الرمزية
+            const firstLetter = displayName.charAt(0);
+            userAvatar.textContent = firstLetter;
+            
+            // تعبئة البيانات
+            userName.textContent = displayName;
+            userEmail.textContent = displayEmail;
+            userId.textContent = user.id.substring(0, 8) + '...';
+            
+            // حالة الحساب
+            userStatus.textContent = user.email_confirmed_at ? 'مفعل' : 'في انتظار التفعيل';
+            userStatus.style.color = user.email_confirmed_at ? 'green' : 'orange';
+            
+            // تاريخ التسجيل
+            if (user.created_at) {
+                const date = new Date(user.created_at);
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                signupDate.textContent = date.toLocaleDateString('ar-EG', options);
+            }
+        }
+        
+        // تسجيل الخروج
+        logoutBtn.addEventListener('click', async function() {
+            const { error } = await supabase.auth.signOut();
+            
+            // إزالة بيانات المستخدم من localStorage
+            localStorage.removeItem('auth_user');
+            
+            // توجيه المستخدم إلى صفحة تسجيل الدخول
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
